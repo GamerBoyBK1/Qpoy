@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>404 Not Found - CoRamTix Hosting</title>
+  <meta name="description" content="The page you are looking for could not be found. Let's get you back on track.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Favicon and Touch Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="404 Not Found - CoRamTix Hosting">
+  <meta property="og:description" content="The page you are looking for could not be found.">
+  <meta property="og:image" content="/ccbanner.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="404 Not Found - CoRamTix Hosting">
+  <meta name="twitter:description" content="The page you are looking for could not be found.">
+  <meta name="twitter:image" content="/ccbanner.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --primary: #1A1A1A; --secondary: #674CC4; --accent: #8E6CEF; --deep-purple-blue: #4D2FDB; }
+    body { font-family: 'Poppins', sans-serif; background-color: #F9FAFB; color: #1F2937; }
+    .nav-link-underline:hover { color: var(--secondary); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
+  
+  <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index" class="flex items-center gap-3"><img src="/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" /><span class="text-2xl font-bold text-gray-800">CoRamTix</span></a>
+      <nav class="hidden md:flex items-center space-x-2">
+        <a href="game-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Game Hosting</a>
+        <a href="bot-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Bot Hosting</a>
+        <a href="vps-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">VPS Hosting</a>
+        <a href="support" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Support</a>
+        <a href="login" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
+      </nav>
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700" aria-label="Toggle mobile menu"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+        <a href="game-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">Game Hosting</a>
+        <a href="bot-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">Bot Hosting</a>
+        <a href="vps-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">VPS Hosting</a>
+        <a href="support" class="block text-gray-600 hover:text-indigo-600 py-2">Support</a>
+        <a href="login" class="block bg-indigo-600 text-white text-center mt-2 px-5 py-2.5 rounded-lg">Login</a>
+    </div>
+  </header>
+
+  <main class="flex-grow flex items-center justify-center text-center py-20 px-6">
+    <div>
+        <div class="text-indigo-500 font-black text-7xl lg:text-9xl">404</div>
+        <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">Page Not Found</h1>
+        <p class="mt-6 text-base leading-7 text-gray-600">Sorry, we couldn’t find the page you’re looking for.</p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a href="index" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Go back home</a>
+            <a href="support" class="text-sm font-semibold text-gray-900">Contact support <span aria-hidden="true">&rarr;</span></a>
+        </div>
+    </div>
+  </main>
+  
+  <footer class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-12">
+        <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-8">
+            <a href="terms-of-service" class="text-gray-400 hover:text-white">Terms of service</a>
+            <a href="privacy-policy" class="text-gray-400 hover:text-white">Privacy policy</a>
+            <a href="refund-policy" class="text-gray-400 hover:text-white">Refund policy</a>
+        </nav>
+        <div class="text-center text-gray-500 border-t border-gray-700 pt-8">
+            <p>&copy; <span id="copyright-year"></span> CoRamTix — Premium Server Hosting</p>
+        </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn && mobileMenu) { mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+  </html>

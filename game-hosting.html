@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>CoRamTix - Game Hosting Plans</title>
+  <meta name="description" content="Explore high-performance game server hosting for Minecraft, Rust, FiveM, CS:GO, and more. Instant setup and 24/7 support.">
+  
+  <!-- Favicon and Meta Tags -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta property="og:title" content="CoRamTix - Game Hosting Plans">
+  <meta property="og:description" content="High-performance hosting for Minecraft, Rust, FiveM, CS:GO, and more.">
+  <meta property="og:image" content="/ccbanner.png">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --primary: #1A1A1A; --secondary: #674CC4; --accent: #8E6CEF; --deep-purple-blue: #4D2FDB; }
+    body { font-family: 'Poppins', sans-serif; background-color: #F9FAFB; color: #1F2937; }
+    .hero-gradient { background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue)); }
+    .nav-link-underline:hover { color: var(--secondary); }
+    .game-card { display: block; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .game-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3"><img src="/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" /><span class="text-2xl font-bold text-gray-800">CORAMTIX</span></a>
+      <nav class="hidden md:flex items-center space-x-2">
+        <a href="/game-hosting" class="text-indigo-600 font-semibold px-4 py-2 rounded-md">Game Hosting</a>
+        <a href="/bot-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Bot Hosting</a>
+        <a href="/vps-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">VPS Hosting</a>
+        <a href="/support" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Support</a>
+        <a href="/login" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
+      </nav>
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700" aria-label="Toggle mobile menu"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+        <a href="/game-hosting" class="block text-indigo-600 font-semibold py-2">Game Hosting</a>
+        <a href="/bot-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">Bot Hosting</a>
+        <a href="/vps-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">VPS Hosting</a>
+        <a href="/support" class="block text-gray-600 hover:text-indigo-600 py-2">Support</a>
+        <a href="/login" class="block bg-indigo-600 text-white text-center mt-2 px-5 py-2.5 rounded-lg">Login</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-gradient text-white">
+      <div class="container mx-auto px-6 py-20 text-center">
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Game Server Hosting</h1>
+        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90">Powerful, reliable, and easy-to-use hosting for your favorite games.</p>
+      </div>
+    </section>
+
+    <section id="games" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          
+          <a href="/minecraft-hosting" class="game-card bg-white rounded-lg overflow-hidden">
+            <img src="https://www.minecraft.net/content/dam/minecraftnet/archive/05fde857864a681548eb07b01f8933ea-Header.jpeg" alt="Minecraft Hosting" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-gray-800">Minecraft</h3>
+              <p class="text-gray-600 mb-4">Starting at <span class="font-bold text-indigo-600">₹49/mo</span></p>
+              <span class="block w-full text-center bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700">View Plans</span>
+            </div>
+          </a>
+
+          <a href="/fivem-hosting" class="game-card bg-white rounded-lg overflow-hidden">
+            <img src="https://placehold.co/400x200/007bff/white?text=FiveM" alt="FiveM Hosting" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-gray-800">FiveM</h3>
+              <p class="text-gray-600 mb-4">Starting at <span class="font-bold text-indigo-600">₹649/mo</span></p>
+              <span class="block w-full text-center bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700">View Plans</span>
+            </div>
+          </a>
+
+          <a href="/rust-hosting" class="game-card bg-white rounded-lg overflow-hidden">
+            <img src="https://placehold.co/400x200/d9534f/white?text=Rust" alt="Rust Hosting" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-gray-800">Rust</h3>
+              <p class="text-gray-600 mb-4">Starting at <span class="font-bold text-indigo-600">₹799/mo</span></p>
+              <span class="block w-full text-center bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700">View Plans</span>
+            </div>
+          </a>
+          
+          <a href="/csgo-hosting" class="game-card bg-white rounded-lg overflow-hidden">
+            <img src="https://placehold.co/400x200/f0ad4e/white?text=CS:GO" alt="CS:GO Hosting" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-2 text-gray-800">Counter-Strike: GO</h3>
+              <p class="text-gray-600 mb-4">Starting at <span class="font-bold text-indigo-600">₹499/mo</span></p>
+              <span class="block w-full text-center bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700">View Plans</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-12">
+      <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-8">
+        <a href="/terms-of-service" class="text-gray-400 hover:text-white">Terms of service</a>
+        <a href="/privacy-policy" class="text-gray-400 hover:text-white">Privacy policy</a>
+        <a href="/refund-policy" class="text-gray-400 hover:text-white">Refund policy</a>
+      </nav>
+      <div class="text-center text-gray-500 border-t border-gray-700 pt-8">
+        <p>&copy; <span id="copyright-year"></span> CoRamTix — Premium Server Hosting</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn && mobileMenu) { mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    });
+  </script>
+
+</body>
+</html>
+

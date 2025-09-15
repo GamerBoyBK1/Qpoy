@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>CoRamTix - Support Center</title>
+  <meta name="description" content="Get help with your CoRamTix services. Access our knowledge base, submit a support ticket, view our FAQs, or contact our expert team 24/7.">
+  <meta name="keywords" content="game server support, vps support, bot hosting help, knowledge base, support ticket, Minecraft help, Rust support, customer service">
+  <meta name="author" content="CoRamTix">
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon and Touch Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="CoRamTix - Support Center">
+  <meta property="og:description" content="Get help with your CoRamTix services. Access our knowledge base, submit a support ticket, or view our FAQs. Our expert team is available 24/7 to assist you.">
+  <meta property="og:image" content="/ccbanner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CoRamTix - Support Center">
+  <meta name="twitter:description" content="Get help with your CoRamTix services. Access our knowledge base, submit a support ticket, or view our FAQs. Our expert team is available 24/7 to assist you.">
+  <meta name="twitter:image" content="/ccbanner.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --primary: #1A1A1A; --secondary: #674CC4; --accent: #8E6CEF; --deep-purple-blue: #4D2FDB; }
+    body { font-family: 'Poppins', sans-serif; background-color: #F9FAFB; color: #1F2937; }
+    .hero-gradient { background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue)); }
+    .nav-link-underline:hover { color: var(--secondary); }
+    .feature-card { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .feature-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); }
+    details > summary { list-style: none; }
+    details > summary::-webkit-details-marker { display: none; }
+    details summary .icon { transition: transform 0.2s; }
+    details[open] summary .icon { transform: rotate(45deg); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="index" class="flex items-center gap-3"><img src="/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" /><span class="text-2xl font-bold text-gray-800">CoRamTix</span></a>
+      <nav class="hidden md:flex items-center space-x-2">
+        <a href="game-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Game Hosting</a>
+        <a href="bot-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Bot Hosting</a>
+        <a href="vps-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">VPS Hosting</a>
+        <a href="support" class="text-indigo-600 font-semibold px-4 py-2 rounded-md">Support</a>
+        <a href="login" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
+      </nav>
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700" aria-label="Toggle mobile menu"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+        <a href="game-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">Game Hosting</a>
+        <a href="bot-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">Bot Hosting</a>
+        <a href="vps-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">VPS Hosting</a>
+        <a href="support" class="block text-indigo-600 font-semibold py-2">Support</a>
+        <a href="login" class="block bg-indigo-600 text-white text-center mt-2 px-5 py-2.5 rounded-lg">Login</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-gradient text-white">
+      <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">Support Center</h1>
+        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90">How can we help? Find answers fast in our knowledge base or contact our expert team.</p>
+      </div>
+    </section>
+    
+    <section class="bg-white py-20">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <a href="#faq" class="feature-card bg-gray-50 hover:bg-gray-100 rounded-xl p-8 text-center block">
+            <div class="flex justify-center items-center mb-4 text-indigo-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Knowledge Base</h3>
+            <p class="text-gray-600">Browse articles and tutorials to find solutions to common issues.</p>
+          </a>
+          <a href="login" class="feature-card bg-gray-50 hover:bg-gray-100 rounded-xl p-8 text-center block">
+            <div class="flex justify-center items-center mb-4 text-indigo-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" /></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Submit a Ticket</h3>
+            <p class="text-gray-600">Contact our support staff directly by creating a new support ticket.</p>
+          </a>
+          <a href="#" class="feature-card bg-gray-50 hover:bg-gray-100 rounded-xl p-8 text-center block md:col-span-2 lg:col-span-1">
+            <div class="flex justify-center items-center mb-4 text-indigo-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Community Discord</h3>
+            <p class="text-gray-600">Join our Discord server to chat with the community and staff members.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="bg-gray-50 py-20">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Here are some of our most common questions.</p>
+          </div>
+
+          <div class="max-w-3xl mx-auto space-y-4">
+            <details class="group bg-white p-6 rounded-lg shadow-sm">
+              <summary class="flex justify-between items-center font-semibold text-lg cursor-pointer text-gray-800">
+                How do I start my new game server?
+                <span class="icon text-indigo-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" /></svg>
+                </span>
+              </summary>
+              <p class="text-gray-600 mt-4">
+                Once your order is complete, your server will be provisioned instantly. You will receive an email with your control panel login details. From there, you can start, stop, and configure your server with just a few clicks. Check our Knowledge Base for game-specific setup guides.
+              </p>
+            </details>
+            <details class="group bg-white p-6 rounded-lg shadow-sm">
+              <summary class="flex justify-between items-center font-semibold text-lg cursor-pointer text-gray-800">
+                What is your refund policy?
+                <span class="icon text-indigo-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" /></svg>
+                </span>
+              </summary>
+              <p class="text-gray-600 mt-4">
+                We offer a 24-hour refund policy for all new game server and VPS hosting plans. If you are not satisfied with our service for any reason, please submit a support ticket within 24 hours of your initial purchase to request a full refund. Please see our <a href="refund-policy" class="text-indigo-600 hover:underline">Refund Policy</a> page for full details.
+              </p>
+            </details>
+            <details class="group bg-white p-6 rounded-lg shadow-sm">
+              <summary class="flex justify-between items-center font-semibold text-lg cursor-pointer text-gray-800">
+                Can I upgrade or downgrade my plan later?
+                <span class="icon text-indigo-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" /></svg>
+                </span>
+              </summary>
+              <p class="text-gray-600 mt-4">
+                Yes! You can upgrade or downgrade your hosting plan at any time through our client area. The process is automated, and you will only be charged a prorated amount for the difference. Your data and server IP address will remain unchanged.
+              </p>
+            </details>
+             <details class="group bg-white p-6 rounded-lg shadow-sm">
+              <summary class="flex justify-between items-center font-semibold text-lg cursor-pointer text-gray-800">
+                Do you offer DDoS protection?
+                <span class="icon text-indigo-500">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" /></svg>
+                </span>
+              </summary>
+              <p class="text-gray-600 mt-4">
+                Absolutely. All our services come with enterprise-grade DDoS protection to keep your server online and safe from malicious attacks. Our system automatically detects and mitigates attacks without impacting your server's performance.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-12">
+      <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-8">
+        <a href="terms-of-service" class="text-gray-400 hover:text-white">Terms of service</a>
+        <a href="privacy-policy" class="text-gray-400 hover:text-white">Privacy policy</a>
+        <a href="refund-policy" class="text-gray-400 hover:text-white">Refund policy</a>
+      </nav>
+      <div class="text-center text-gray-500 border-t border-gray-700 pt-8">
+        <p>&copy; <span id="copyright-year"></span> CoRamTix — Premium Server Hosting</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+          mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+          mobileMenu.classList.toggle('hidden');
+          mobileMenuBtn.innerHTML = !isExpanded 
+            ? `<svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>`
+            : `<svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>`;
+        });
+      }
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    });
+  </script>
+
+</body>
+</html>
+

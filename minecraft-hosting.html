@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>CoRamTix - Minecraft Hosting Plans</title>
+  <meta name="description" content="Premium Minecraft server hosting with one-click modpack installs, DDoS protection, and low latency for the ultimate gameplay experience.">
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:title" content="CoRamTix - Minecraft Hosting Plans">
+  <meta property="og:description" content="Premium Minecraft server hosting with one-click modpack installs, DDoS protection, and low latency for the ultimate gameplay experience.">
+  <meta property="og:image" content="/ccbanner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CoRamTix - Minecraft Hosting Plans">
+  <meta name="twitter:description" content="Premium Minecraft server hosting with one-click modpack installs, DDoS description, and low latency for the ultimate gameplay experience.">
+  <meta name="twitter:image" content="/ccbanner.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --primary: #1A1A1A; --secondary: #674CC4; --accent: #8E6CEF; --deep-purple-blue: #4D2FDB; }
+    body { font-family: 'Poppins', sans-serif; background-color: #F9FAFB; color: #1F2937; }
+    .hero-gradient { background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue)); }
+    .nav-link-underline:hover { color: var(--secondary); }
+    .pricing-card { border: 1px solid #e5e7eb; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .pricing-card:hover, .pricing-card.featured { transform: scale(1.05); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); border-color: var(--secondary); }
+    .check-icon { color: #22c55e; }
+    .tab-active { background-color: #4f46e5; color: white !important; }
+    .tab-inactive:hover { background-color: #eef2ff; color: #4f46e5 !important; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+  
+  <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3"><img src="/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" /><span class="text-2xl font-bold text-gray-800">CORAMTIX</span></a>
+      <nav class="hidden md:flex items-center space-x-2">
+        <a href="/game-hosting" class="text-indigo-600 font-semibold px-4 py-2 rounded-md">Game Hosting</a>
+        <a href="/bot-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Bot Hosting</a>
+        <a href="/vps-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">VPS Hosting</a>
+        <a href="/support" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Support</a>
+        <a href="/login" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
+      </nav>
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700" aria-label="Toggle mobile menu"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
+        <a href="/game-hosting" class="block text-indigo-600 font-semibold py-2">Game Hosting</a>
+        <a href="/bot-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">Bot Hosting</a>
+        <a href="/vps-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">VPS Hosting</a>
+        <a href="/support" class="block text-gray-600 hover:text-indigo-600 py-2">Support</a>
+        <a href="/login" class="block bg-indigo-600 text-white text-center mt-2 px-5 py-2.5 rounded-lg">Login</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-gradient text-white">
+      <div class="container mx-auto px-6 py-20 text-center">
+        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Minecraft Server Hosting</h1>
+        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90">Unleash your creativity with our powerful, easy-to-manage Minecraft servers.</p>
+      </div>
+    </section>
+
+    <section id="minecraft-plans" class="py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Choose Your Plan</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Scalable plans perfect for any server, from a private world with friends to a large community.</p>
+        </div>
+
+        <div class="flex justify-center mb-12">
+            <button id="tab-standard" onclick="showPlans('standard')" class="px-6 py-3 rounded-l-lg border border-indigo-600 text-indigo-600 font-semibold tab-active">
+                Standard Plans
+            </button>
+            <button id="tab-ryzen" onclick="showPlans('ryzen')" class="px-6 py-3 rounded-r-lg border border-indigo-600 text-indigo-600 font-semibold tab-inactive">
+                Ryzen 9 Performance
+            </button>
+        </div>
+        <div id="standard-plans-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+            
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Grass Plan</h3>
+            <p class="text-gray-500 mb-6">Perfect for testing or solo play.</p>
+            <p class="text-5xl font-extrabold mb-6">₹49<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>1 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>100% High Frequency CPU</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>4 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>1 Cloud Backup</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Wood Plan</h3>
+            <p class="text-gray-500 mb-6">Start your small world.</p>
+            <p class="text-5xl font-extrabold mb-6">₹99<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>2 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>100% High Frequency CPU</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>8 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>1 Cloud Backup</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Stone Plan</h3>
+            <p class="text-gray-500 mb-6">Ideal for starting out.</p>
+            <p class="text-5xl font-extrabold mb-6">₹199<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>4 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>150% High Frequency CPU</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>16 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>1 Cloud Backup</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Coal Plan</h3>
+            <p class="text-gray-500 mb-6">Great for small groups.</p>
+            <p class="text-5xl font-extrabold mb-6">₹299<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>6 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>200% High Frequency CPU</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>24 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>2 Cloud Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+            
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Iron Plan</h3>
+            <p class="text-gray-500 mb-6">For slightly larger communities.</p>
+            <p class="text-5xl font-extrabold mb-6">₹399<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>8 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>250% High Frequency CPU</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>32 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>2 Cloud Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Gold Plan</h3>
+            <p class="text-gray-500 mb-6">Excellent performance for 1.20+ servers.</p>
+            <p class="text-5xl font-extrabold mb-6">₹499<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>10 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>300% High Frequency CPU</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>40 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>2 Cloud Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card featured bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Diamond Plan</h3>
+            <p class="text-indigo-600 font-semibold mb-6">Most Popular</p>
+            <p class="text-5xl font-extrabold mb-6">₹599<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>12 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>350% High Frequency CPU</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>48 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>2 Cloud Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Emerald Plan</h3>
+            <p class="text-gray-500 mb-6">For growing communities.</p>
+            <p class="text-5xl font-extrabold mb-6">₹799<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>16 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>400% High Frequency CPU</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>64 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>2 Cloud Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Netherite Plan</h3>
+            <p class="text-gray-500 mb-6">For large modpacks and communities.</p>
+            <p class="text-5xl font-extrabold mb-6">₹999<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>20 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>450% High Frequency CPU</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>80 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>2 Cloud Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Obsidian Plan</h3>
+            <p class="text-gray-500 mb-6">For popular servers.</p>
+            <p class="text-5xl font-extrabold mb-6">₹1,199<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>24 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>500% High Frequency CPU</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>96 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>2 Cloud Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card featured bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Bedrock Plan</h3>
+            <p class="text-indigo-600 font-semibold mb-6">Ultimate Performance</p>
+            <p class="text-5xl font-extrabold mb-6">₹1,499<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>32 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>600% High Frequency CPU</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>150 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>2 Cloud Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="hidden lg:block"></div>
+          <div class="hidden lg:block"></div>
+        </div>
+        <div id="ryzen-plans-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start hidden">
+            
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Blaze Plan</h3>
+            <p class="text-gray-500 mb-6">Starter Ryzen Performance.</p>
+            <p class="text-5xl font-extrabold mb-6">₹600<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>4 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Unlimited CPU Power</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>24 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>1 Backup</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Storm Plan</h3>
+            <p class="text-gray-500 mb-6">Pro Ryzen Performance.</p>
+            <p class="text-5xl font-extrabold mb-6">₹1,200<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>8 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Unlimited CPU Power</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>48 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>2 Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card featured bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Phantom Plan</h3>
+            <p class="text-indigo-600 font-semibold mb-6">Advanced Performance</p>
+            <p class="text-5xl font-extrabold mb-6">₹1,800<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>12 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Unlimited CPU Power</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>72 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>3 Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Titan Plan</h3>
+            <p class="text-gray-500 mb-6">Elite Ryzen Performance.</p>
+            <p class="text-5xl font-extrabold mb-6">₹2,400<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>16 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Unlimited CPU Power</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>96 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>3 Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+            
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Hydra Plan</h3>
+            <p class="text-gray-500 mb-6">Ultra Powerhouse.</p>
+            <p class="text-5xl font-extrabold mb-6">₹3,000<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>20 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Unlimited CPU Power</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>120 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>3 Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Vortex Plan</h3>
+            <p class="text-gray-500 mb-6">Extreme Performance.</p>
+            <p class="text-5xl font-extrabold mb-6">₹3,600<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>24 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Unlimited CPU Power</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>144 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>4 Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+
+          <div class="pricing-card featured bg-white rounded-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-2">Zenith Plan</h3>
+            <p class="text-indigo-600 font-semibold mb-6">Overlord (Ultimate)</p>
+            <p class="text-5xl font-extrabold mb-6">₹4,800<span class="text-lg font-medium">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>32 GB DDR4 Memory</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Unlimited CPU Power</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>192 GB NVMe SSD</li>
+              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>5 Backups</li>
+            </ul>
+            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          </div>
+          
+          <div class="hidden lg:block"></div>
+          <div class="hidden lg:block"></div>
+        </div>
+        </div>
+    </section>
+    
+    <section class="bg-white py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">All Plans Include</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0"><svg class="h-8 w-8 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286zm0 13.036h.008v.008h-.008v-.008z" /></svg></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">DDoS Protection</h3><p class="text-gray-600">Advanced protection to keep your server safe from attacks.</p></div>
+            </div>
+            <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0"><svg class="h-8 w-8 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Full Control Panel</h3><p class="text-gray-600">Easy-to-use panel to manage your server, files, and plugins.</p></div>
+            </div>
+            <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0"><svg class="h-8 w-8 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg></div>
+                <div><h3 class="text-xl font-semibold text-gray-800">Instant Setup</h3><p class="text-gray-600">Your server is automatically provisioned and ready in minutes.</p></div>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-800 text-white">
+    <div class="container mx-auto px-6 py-12">
+      <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-8">
+        <a href="/terms-of-service" class="text-gray-400 hover:text-white">Terms of service</a>
+        <a href="/privacy-policy" class="text-gray-400 hover:text-white">Privacy policy</a>
+        <a href="/refund-policy" class="text-gray-400 hover:text-white">Refund policy</a>
+      </nav>
+      <div class="text-center text-gray-500 border-t border-gray-700 pt-8">
+        <p>&copy; <span id="copyright-year"></span> CoRamTix — Premium Server Hosting</p>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function showPlans(type) {
+      const standardList = document.getElementById('standard-plans-list');
+      const ryzenList = document.getElementById('ryzen-plans-list');
+      const standardTab = document.getElementById('tab-standard');
+      const ryzenTab = document.getElementById('tab-ryzen');
+
+      if (type === 'standard') {
+        standardList.classList.remove('hidden');
+        ryzenList.classList.add('hidden');
+        standardTab.classList.add('tab-active');
+        standardTab.classList.remove('tab-inactive');
+        ryzenTab.classList.remove('tab-active');
+        ryzenTab.classList.add('tab-inactive');
+      } else if (type === 'ryzen') {
+        standardList.classList.add('hidden');
+        ryzenList.classList.remove('hidden');
+        ryzenTab.classList.add('tab-active');
+        ryzenTab.classList.remove('tab-inactive');
+        standardTab.classList.remove('tab-active');
+        standardTab.classList.add('tab-inactive');
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuBtn && mobileMenu) { mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+      // Initialize the tabs on load
+      showPlans('standard'); 
+    });
+  </script>
+</body>
+</html>
