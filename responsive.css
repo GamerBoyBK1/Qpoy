@@ -134,12 +134,13 @@
     transform: translateY(-5px);
   }
   
-  .popular-badge {
-    top: var(--spacing-md);
-    right: var(--spacing-md);
-    font-size: var(--font-size-xs);
-    padding: var(--spacing-xs) var(--spacing-sm);
-  }
+      .popular-badge {
+        top: -10px;
+        padding: 0.4rem 1rem;
+        font-size: 0.7rem;
+      }
+    }
+    
   
   .service-features {
     text-align: center;
@@ -255,7 +256,7 @@
   .footer-badges {
     justify-content: center;
   }
-}
+
 
 /* Mobile Styles (480px and below) */
 @media screen and (max-width: 480px) {
