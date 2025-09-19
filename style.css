@@ -549,19 +549,42 @@ strong {
   transform: scale(1.05);
 }
 
-.popular-badge {
-  position: absolute;
-  top: var(--spacing-lg);
-  right: var(--spacing-lg);
-  background: var(--gradient-primary);
-  color: var(--bg-white);
-  padding: var(--spacing-xs) var(--spacing-md);
-  border-radius: var(--radius-2xl);
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  box-shadow: var(--shadow-md);
-}
-
+    /* FIXED Popular badge - NO OVERLAP */
+    .popular-badge {
+      position: absolute;
+      top: -12px; /* Moved further up */
+      left: 50%;
+      transform: translateX(-50%); /* Center it horizontally */
+      background: linear-gradient(135deg, #10B981, #059669);
+      color: white;
+      padding: 0.5rem 1.25rem; /* Increased padding */
+      border-radius: 1rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      z-index: 20;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+    
+    /* Alternative badge for different styles */
+    .popular-badge-alt {
+      position: absolute;
+      top: -6px;
+      right: 1rem;
+      background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+      color: white;
+      padding: 0.35rem 0.85rem;
+      border-radius: 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.025em;
+      z-index: 20;
+      box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
+    }
+    
 .service-icon {
   font-size: 3rem;
   margin-bottom: var(--spacing-lg);
