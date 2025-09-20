@@ -2,183 +2,660 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>CoRamTix - Rust Server Hosting</title>
-  <meta name="description" content="High-performance Rust server hosting with instant setup, uMod support, and powerful DDoS protection. Build your ultimate Rust survival experience.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rust Server Hosting - CoRamTix | Premium Performance Starting at ₹499/month</title>
+  <meta name="description" content="High-performance Rust server hosting with instant setup, uMod support, powerful DDoS protection, and 99.9% uptime. Build your ultimate Rust survival experience.">
+  <meta name="keywords" content="rust server hosting, rust hosting, rust server, oxide hosting, umod hosting, survival game hosting, rust dedicated server">
   
-  <!-- Favicon and Touch Icons -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+  <!-- Fixed Favicon and Meta Tags with Correct Paths -->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="images/favicon-96x96.png" />
+  <link rel="manifest" href="images/web-app-manifest.json" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="">
-  <meta property="og:title" content="CoRamTix - Rust Server Hosting">
-  <meta property="og:description" content="High-performance Rust server hosting with instant setup, uMod support, and powerful DDoS protection.">
-  <meta property="og:image" content="/ccbanner.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CoRamTix - Rust Server Hosting">
-  <meta name="twitter:description" content="High-performance Rust server hosting with instant setup, uMod support, and powerful DDoS protection.">
-  <meta name="twitter:image" content="/ccbanner.png">
-
+  <!-- Performance Optimizations -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root { --primary: #1A1A1A; --secondary: #674CC4; --accent: #8E6CEF; --deep-purple-blue: #4D2FDB; }
-    body { font-family: 'Poppins', sans-serif; background-color: #F9FAFB; color: #1F2937; }
-    .hero-gradient { background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue)); }
-    .nav-link-underline:hover { color: var(--secondary); }
-    .pricing-card { border: 1px solid #e5e7eb; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .pricing-card:hover, .pricing-card.featured { transform: scale(1.05); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); border-color: var(--secondary); }
-    .check-icon { color: #22c55e; }
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
   
-  <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+  <!-- Enhanced Styles - SAME COLORS AS MAIN SITE -->
+  <style>
+    :root { 
+      --primary: #1A1A1A; 
+      --secondary: #674CC4; 
+      --accent: #8E6CEF; 
+      --deep-purple-blue: #4D2FDB;
+      --success: #10B981;
+      --warning: #F59E0B;
+    }
+    
+    body { 
+      font-family: 'Poppins', sans-serif; 
+      background: #F9FAFB; 
+      color: #1F2937; 
+      overflow-x: hidden;
+    }
+    
+    /* Hero gradient - SAME AS MAIN SITE */
+    .hero-gradient { 
+      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue)); 
+    }
+    
+    /* Navigation styles */
+    .nav-link-underline:hover { 
+      color: var(--secondary); 
+      background: rgba(103, 76, 196, 0.05);
+    }
+    
+    /* Enhanced pricing cards */
+    .pricing-card { 
+      border: 1px solid #e5e7eb; 
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: visible;
+      background: white;
+      margin-top: 1.5rem;
+    }
+    
+    .pricing-card:hover, .pricing-card.featured { 
+      transform: translateY(-8px); 
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+      border-color: var(--secondary);
+    }
+    
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .pricing-card:hover::before,
+    .pricing-card.featured::before {
+      transform: scaleX(1);
+    }
+    
+    .check-icon { 
+      color: var(--success);
+      flex-shrink: 0;
+    }
+    
+    /* Popular badge - SAME PURPLE THEME */
+    .popular-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 2rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      z-index: 25;
+      white-space: nowrap;
+      box-shadow: 0 8px 25px rgba(103, 76, 196, 0.4);
+      border: 2px solid white;
+      animation: pulseGlow 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes pulseGlow {
+      0% {
+        box-shadow: 0 8px 25px rgba(103, 76, 196, 0.4);
+      }
+      100% {
+        box-shadow: 0 12px 35px rgba(103, 76, 196, 0.6);
+      }
+    }
+    
+    /* Price highlight - PURPLE GRADIENT */
+    .price-highlight {
+      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Enhanced button styles - PURPLE THEME */
+    .btn-order {
+      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-order::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .btn-order:hover::before {
+      left: 100%;
+    }
+    
+    .btn-order:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(103, 76, 196, 0.4);
+    }
+    
+    /* Secondary button - PURPLE THEME */
+    .btn-secondary {
+      background: rgba(103, 76, 196, 0.1);
+      color: var(--secondary);
+      border: 1px solid rgba(103, 76, 196, 0.2);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(103, 76, 196, 0.15);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(103, 76, 196, 0.2);
+    }
+    
+    /* Feature cards */
+    .feature-card {
+      background: white;
+      border: 1px solid #E5E7EB;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border-color: var(--secondary);
+    }
+    
+    /* Feature icons - PURPLE GRADIENT */
+    .rust-feature-icon {
+      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
+      color: white;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover .rust-feature-icon {
+      transform: scale(1.1);
+    }
+    
+    /* Animated elements */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease-out;
+    }
+    
+    /* Hero feature pills */
+    .hero-feature {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin: 0.25rem;
+    }
+    
+    .plans-grid {
+      padding-top: 1.5rem;
+    }
+    
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .pricing-card {
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+      }
+      
+      .hero-gradient {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      
+      .popular-badge {
+        top: -12px;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+
+   <!-- External CSS Files -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
+</head>
+<body class="bg-gray-50">
+  <!-- Enhanced Header - Same as Main Site -->
+  <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="flex items-center gap-3"><img src="/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" /><span class="text-2xl font-bold text-gray-800">CoRamTix</span></a>
+      <a href="/index" class="flex items-center gap-3 transition-transform duration-300 hover:scale-105">
+        <img src="image/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" />
+        <span class="text-2xl font-bold text-gray-800 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">CORAMTIX</span>
+      </a>
+      
       <nav class="hidden md:flex items-center space-x-2">
-        <a href="game-hosting.html" class="text-indigo-600 font-semibold px-4 py-2 rounded-md">Game Hosting</a>
-        <a href="bot-hosting.html" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Bot Hosting</a>
-        <a href="vps-hosting.html" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">VPS Hosting</a>
-        <a href="support.html" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Support</a>
-        <a href="login.html" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
+        <a href="/game-hosting" class="text-indigo-600 font-semibold px-4 py-2 rounded-md bg-purple-50">Game Hosting</a>
+        <a href="/bot-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline transition-all duration-300">Bot Hosting</a>
+        <a href="/vps-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline transition-all duration-300">VPS Hosting</a>
+        <a href="/support" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline transition-all duration-300">Support</a>
+        <a href="/login" class="ml-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">Login</a>
       </nav>
-      <button id="mobile-menu-btn" class="md:hidden text-gray-700" aria-label="Toggle mobile menu"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+      
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700 p-2 rounded-lg hover:bg-gray-100">
+        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
-        <a href="game-hosting.html" class="block text-indigo-600 font-semibold py-2">Game Hosting</a>
-        <a href="bot-hosting.html" class="block text-gray-600 hover:text-indigo-600 py-2">Bot Hosting</a>
-        <a href="vps-hosting.html" class="block text-gray-600 hover:text-indigo-600 py-2">VPS Hosting</a>
-        <a href="support.html" class="block text-gray-600 hover:text-indigo-600 py-2">Support</a>
-        <a href="login.html" class="block bg-indigo-600 text-white text-center mt-2 px-5 py-2.5 rounded-lg">Login</a>
-    </div>
-  </header>
+    
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t px-4 pt-2 pb-4 space-y-2">
+        <a href="/game-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">
+          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M19 10a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Game Hosting
+        </a>
+        <a href="/bot-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">
+          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Bot Hosting
+        </a>
+        <a href="/vps-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">
+          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+          </svg>
+          VPS Hosting
+        </a>
+        <a href="/support" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">
+          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+          Support
+        </a>
+        <a href="/login" class="block bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center font-medium mt-4 px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">Login</a>
+      </div>
+    </header>
 
   <main>
-    <section class="hero-gradient text-white">
-      <div class="container mx-auto px-6 py-20 text-center">
-        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Rust Server Hosting</h1>
-        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90">Survive and thrive with our powerful, lag-free, and secure Rust servers.</p>
+    <!-- Hero Section - SAME PURPLE GRADIENT -->
+    <section class="hero-gradient text-white overflow-hidden relative">
+      <div class="absolute inset-0">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div class="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-300/20 rounded-full mix-blend-multiply filter blur-xl"></div>
+      </div>
+      
+      <div class="container mx-auto px-6 py-24 text-center relative z-10">
+        <div class="inline-flex items-center bg-white/20 text-white px-4 py-2 rounded-full font-semibold mb-6 backdrop-blur-sm">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2L2 22h20L12 2zm-1 14h2v2h-2v-2zm0-8h2v6h-2V8z"/>
+          </svg>
+          Premium Rust Hosting
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+          Rust Server <br>
+          <span class="bg-gradient-to-r from-purple-200 to-blue-200 bg-clip-text text-transparent">Hosting</span>
+        </h1>
+        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90 mb-8 leading-relaxed">
+          Survive and thrive with our <strong>powerful, lag-free</strong> Rust servers. Complete with <strong>uMod support</strong> and enterprise-grade DDoS protection.
+        </p>
+        
+        <!-- Key Features -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8 text-sm">
+          <span class="hero-feature">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            Instant Setup
+          </span>
+          <span class="hero-feature">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            uMod/Oxide Support
+          </span>
+          <span class="hero-feature">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+            </svg>
+            NVMe Storage
+          </span>
+          <span class="hero-feature">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            DDoS Protection
+          </span>
+        </div>
+        
+        <!-- CTA Button -->
+        <a href="#rust-plans" class="inline-flex items-center bg-white text-purple-600 font-bold text-lg px-8 py-4 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 group">
+          <span>View Plans</span>
+          <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </a>
       </div>
     </section>
 
+    <!-- Plans Section -->
     <section id="rust-plans" class="py-20">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Choose Your Rust Plan</h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">From a quiet life on the island to all-out clan warfare, we have a plan for you.</p>
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center bg-purple-100 text-purple-700 px-4 py-2 rounded-full font-semibold mb-6">
+            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
+            Choose Your Plan
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Rust Server Hosting Plans</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">From solo survivors to massive clan warfare - we have the perfect server for your Rust experience.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
 
-          <div class="pricing-card bg-white rounded-lg p-8 text-center">
-            <h3 class="text-2xl font-bold mb-2">Primitive</h3>
-            <p class="text-gray-500 mb-6">For solo/duo/trio groups.</p>
-            <p class="text-5xl font-extrabold mb-6">$9.99<span class="text-lg font-medium">/mo</span></p>
+        <!-- Plans Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start plans-grid">
+          
+          <!-- Primitive Plan -->
+          <div class="pricing-card rounded-xl p-8 text-center fade-in-up">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">Primitive</h3>
+            <p class="text-gray-500 mb-6">Perfect for solo/duo/trio groups</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹499<span class="text-lg font-medium text-gray-600">/mo</span></p>
             <ul class="space-y-4 text-gray-600 mb-8 text-left">
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>50 Player Slots</li>
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>8 GB RAM</li>
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>High Performance</li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>50</strong> Player Slots</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>8 GB</strong> RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>100 GB</strong> NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>High Performance CPU</span>
+              </li>
             </ul>
-            <a href="#" class="block w-full bg-indigo-100 text-indigo-700 font-semibold py-3 rounded-lg hover:bg-indigo-200">Deploy Server</a>
+            <a href="/ticket" class="btn-secondary block w-full text-center font-semibold py-3 rounded-lg">Deploy Server</a>
           </div>
 
-          <div class="pricing-card bg-white rounded-lg p-8 text-center featured">
-            <p class="bg-indigo-600 text-white text-sm font-bold py-1 px-4 rounded-full inline-block mb-4 -mt-12">Most Popular</p>
-            <h3 class="text-2xl font-bold mb-2">Warlord</h3>
-            <p class="text-gray-500 mb-6">For communities & modded servers.</p>
-            <p class="text-5xl font-extrabold mb-6">$19.99<span class="text-lg font-medium">/mo</span></p>
+          <!-- Warlord Plan - Featured -->
+          <div class="pricing-card featured rounded-xl p-8 text-center fade-in-up">
+            <div class="popular-badge">MOST POPULAR</div>
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">Warlord</h3>
+            <p class="text-purple-600 font-semibold mb-6">Best for Communities</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹999<span class="text-lg font-medium text-gray-600">/mo</span></p>
             <ul class="space-y-4 text-gray-600 mb-8 text-left">
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>125 Player Slots</li>
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>12 GB RAM</li>
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>uMod Plugin Support</li>
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>DDoS Protection</li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>125</strong> Player Slots</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>12 GB</strong> RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>150 GB</strong> NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>uMod Plugin Support</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>DDoS Protection</span>
+              </li>
             </ul>
-            <a href="#" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Deploy Server</a>
+            <a href="/ticket" class="btn-order block w-full text-white font-semibold py-3 rounded-lg">Deploy Server</a>
           </div>
 
-          <div class="pricing-card bg-white rounded-lg p-8 text-center">
-            <h3 class="text-2xl font-bold mb-2">Zerg</h3>
-            <p class="text-gray-500 mb-6">For large clans & heavy mods.</p>
-            <p class="text-5xl font-extrabold mb-6">$29.99<span class="text-lg font-medium">/mo</span></p>
+          <!-- Zerg Plan -->
+          <div class="pricing-card rounded-xl p-8 text-center fade-in-up">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">Zerg</h3>
+            <p class="text-gray-500 mb-6">For large clans & heavy mods</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹1,499<span class="text-lg font-medium text-gray-600">/mo</span></p>
             <ul class="space-y-4 text-gray-600 mb-8 text-left">
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>200 Player Slots</li>
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>16 GB RAM</li>
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>CPU Priority</li>
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Premium Support</li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>200</strong> Player Slots</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>16 GB</strong> RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>200 GB</strong> NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>CPU Priority</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Premium Support</span>
+              </li>
             </ul>
-            <a href="#" class="block w-full bg-indigo-100 text-indigo-700 font-semibold py-3 rounded-lg hover:bg-indigo-200">Deploy Server</a>
+            <a href="/ticket" class="btn-secondary block w-full text-center font-semibold py-3 rounded-lg">Deploy Server</a>
           </div>
           
-          <div class="pricing-card bg-white rounded-lg p-8 text-center">
-            <h3 class="text-2xl font-bold mb-2">Behemoth</h3>
-            <p class="text-gray-500 mb-6">For ultimate performance.</p>
-            <p class="text-5xl font-extrabold mb-6">$49.99<span class="text-lg font-medium">/mo</span></p>
+          <!-- Behemoth Plan -->
+          <div class="pricing-card rounded-xl p-8 text-center fade-in-up">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">Behemoth</h3>
+            <p class="text-gray-500 mb-6">Ultimate performance server</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹2,499<span class="text-lg font-medium text-gray-600">/mo</span></p>
             <ul class="space-y-4 text-gray-600 mb-8 text-left">
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>300+ Player Slots</li>
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>20 GB RAM</li>
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Highest CPU Priority</li>
-              <li class="flex items-center"><svg class="h-5 w-5 check-icon mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>Premium Support</li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>300+</strong> Player Slots</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>20 GB</strong> RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>300 GB</strong> NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Highest CPU Priority</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>VIP Support</span>
+              </li>
             </ul>
-            <a href="#" class="block w-full bg-indigo-100 text-indigo-700 font-semibold py-3 rounded-lg hover:bg-indigo-200">Deploy Server</a>
+            <a href="/ticket" class="btn-secondary block w-full text-center font-semibold py-3 rounded-lg">Deploy Server</a>
           </div>
-
         </div>
       </div>
     </section>
-    
+
+    <!-- Features Section -->
     <section class="bg-white py-20">
       <div class="container mx-auto px-6">
-        <div class="text-center mb-12">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center bg-purple-100 text-purple-700 px-4 py-2 rounded-full font-semibold mb-6">
+            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
+            Everything Included
+          </div>
           <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">All Rust Plans Include</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">Every Rust server comes with these premium features at no extra cost</p>
         </div>
+        
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div class="flex items-start space-x-4">
-                <div class="flex-shrink-0"><svg class="h-8 w-8 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286zm0 13.036h.008v.008h-.008v-.008z" /></svg></div>
-                <div><h3 class="text-xl font-semibold text-gray-800">Powerful DDoS Protection</h3><p class="text-gray-600">Your server is always protected from network attacks.</p></div>
+          <div class="feature-card text-center">
+            <div class="rust-feature-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
             </div>
-            <div class="flex items-start space-x-4">
-                <div class="flex-shrink-0"><svg class="h-8 w-8 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" /></svg></div>
-                <div><h3 class="text-xl font-semibold text-gray-800">Full FTP & File Access</h3><p class="text-gray-600">Easily manage your server files and configurations.</p></div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Powerful DDoS Protection</h3>
+            <p class="text-gray-600">Your server is always protected from network attacks with enterprise-grade security.</p>
+          </div>
+          
+          <div class="feature-card text-center">
+            <div class="rust-feature-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/>
+              </svg>
             </div>
-            <div class="flex items-start space-x-4">
-                <div class="flex-shrink-0"><svg class="h-8 w-8 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.02 6a11.95 11.95 0 015.96 0m-5.96 0a11.95 11.95 0 00-5.96 0M12 21a12 12 0 0010-10.5 11.95 11.95 0 00-2.4-7.22M12 21a12 12 0 01-10-10.5 11.95 11.95 0 012.4-7.22" /></svg></div>
-                <div><h3 class="text-xl font-semibold text-gray-800">1-Click uMod Install</h3><p class="text-gray-600">Install uMod (Oxide) instantly to add plugins to your server.</p></div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Full FTP & File Access</h3>
+            <p class="text-gray-600">Easily manage your server files and configurations with full FTP access.</p>
+          </div>
+          
+          <div class="feature-card text-center">
+            <div class="rust-feature-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5"/>
+              </svg>
             </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">1-Click uMod Install</h3>
+            <p class="text-gray-600">Install uMod (Oxide) instantly to add plugins and enhance your Rust server.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-gray-800 text-white">
-    <div class="container mx-auto px-6 py-12">
-      <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-8">
-        <a href="terms-of-service.html" class="text-gray-400 hover:text-white">Terms of service</a>
-        <a href="privacy-policy.html" class="text-gray-400 hover:text-white">Privacy policy</a>
-        <a href="refund-policy.html" class="text-gray-400 hover:text-white">Refund policy</a>
-      </nav>
-      <div class="text-center text-gray-500 border-t border-gray-700 pt-8">
-        <p>&copy; <span id="copyright-year"></span> CoRamTix — Premium Server Hosting</p>
+  <!-- Enhanced Footer -->
+  <footer class="bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white">
+    <div class="container mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center gap-3 mb-6">
+            <img src="image/favicon.svg" alt="CoRamTix" class="h-10 w-10">
+            <span class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">CORAMTIX</span>
+          </div>
+          <p class="text-gray-300 leading-relaxed">Premium Rust server hosting with enterprise-grade infrastructure and 24/7 expert support.</p>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Rust Hosting</h4>
+          <nav class="space-y-3">
+            <a href="/rust-server-hosting" class="block text-gray-300 hover:text-purple-400">Rust Plans</a>
+            <a href="/game-hosting" class="block text-gray-300 hover:text-purple-400">All Games</a>
+            <a href="/support" class="block text-gray-300 hover:text-purple-400">Setup Guide</a>
+            <a href="/ticket." class="block text-gray-300 hover:text-purple-400">Get Support</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Other Services</h4>
+          <nav class="space-y-3">
+            <a href="/game-hosting" class="block text-gray-300 hover:text-purple-400">Game Hosting</a>
+            <a href="/bot-hosting" class="block text-gray-300 hover:text-purple-400">Bot Hosting</a>
+            <a href="/vps-hosting" class="block text-gray-300 hover:text-purple-400">VPS Hosting</a>
+            <a href="/support" class="block text-gray-300 hover:text-purple-400">Support Center</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Get Help</h4>
+          <nav class="space-y-3">
+            <a href="/support" class="block text-gray-300 hover:text-purple-400">Help Center</a>
+            <a href="/ticket" class="block text-gray-300 hover:text-purple-400">Submit Ticket</a>
+            <a href="/support" class="block text-gray-300 hover:text-purple-400">Contact Support</a>
+            <a href="/discord" class="block text-gray-300 hover:text-purple-400">Join Discord</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 pt-8 text-center">
+        <p class="text-gray-400">&copy; <span id="copyright-year">2025</span> CoRamTix. All rights reserved. | Premium Rust Server Hosting</p>
       </div>
     </div>
   </footer>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
-      if (mobileMenuBtn && mobileMenu) { mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
+      
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
     });
   </script>
 </body>
 </html>
-
