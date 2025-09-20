@@ -2,199 +2,839 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>CoRamTix - VPS Hosting Plans</title>
-  <meta name="description" content="High-performance KVM VPS hosting with NVMe SSDs, full root access, and DDoS protection. Deploy your virtual server in minutes.">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta property="og:title" content="CoRamTix - VPS Hosting Plans">
-  <meta property="og:description" content="High-performance KVM VPS hosting with NVMe SSDs, full root access, and DDoS protection.">
-  <meta property="og:image" content="/ccbanner.png">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VPS Hosting - CoRamTix | High-Performance Virtual Servers Starting at ₹300/month</title>
+  <meta name="description" content="High-performance KVM VPS hosting with NVMe SSDs, full root access, DDoS protection, and 99.9% uptime. Deploy your virtual server in minutes.">
+  <meta name="keywords" content="vps hosting, virtual private server, kvm vps, linux vps, nvme ssd vps, cloud hosting, dedicated resources">
   
+  <!-- Fixed Favicon and Meta Tags with Correct Paths -->
+  <link rel="icon" type="image/x-icon" href="image/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+  <link rel="shortcut icon" href="image/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="image/favicon-96x96.png" />
+  <link rel="manifest" href="image/web-app-manifest.json" />
+
+  <!-- Open Graph with Correct Paths -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://coramtix.in/vps-hosting.html">
+  <meta property="og:title" content="VPS Hosting - CoRamTix">
+  <meta property="og:description" content="High-performance KVM VPS hosting with NVMe SSDs, full root access, and DDoS protection.">
+  <meta property="og:image" content="image/ccbanner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VPS Hosting - CoRamTix">
+  <meta name="twitter:description" content="High-performance KVM VPS hosting with NVMe SSDs, full root access, and DDoS protection.">
+  <meta name="twitter:image" content="image/ccbanner.png">
+
+
+  <!-- Performance Optimizations -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <!-- Enhanced Styles - Same Theme as Main Site -->
   <style>
-    :root { --primary: #1A1A1A; --secondary: #674CC4; --accent: #8E6CEF; --deep-purple-blue: #4D2FDB; }
-    body { font-family: 'Poppins', sans-serif; background-color: #F9FAFB; color: #1F2937; }
-    .hero-gradient { background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue)); }
-    .nav-link-underline:hover { color: var(--secondary); }
-    .pricing-card { border: 1px solid #e5e7eb; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .pricing-card:hover, .pricing-card.featured { transform: scale(1.05); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); border-color: var(--secondary); }
+    :root { 
+      --primary: #1A1A1A; 
+      --secondary: #674CC4; 
+      --accent: #8E6CEF; 
+      --deep-purple-blue: #4D2FDB;
+      --success: #10B981;
+      --warning: #F59E0B;
+    }
+    
+    body { 
+      font-family: 'Poppins', sans-serif; 
+      background: #F9FAFB; 
+      color: #1F2937; 
+      overflow-x: hidden;
+    }
+    
+    /* Hero gradient - SAME AS MAIN SITE */
+    .hero-gradient { 
+      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue)); 
+    }
+    
+    /* Navigation styles */
+    .nav-link-underline:hover { 
+      color: var(--secondary); 
+      background: rgba(103, 76, 196, 0.05);
+    }
+    
+    /* Enhanced pricing cards */
+    .pricing-card { 
+      border: 1px solid #e5e7eb; 
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: visible;
+      background: white;
+      margin-top: 1.5rem;
+    }
+    
+    .pricing-card:hover, .pricing-card.featured { 
+      transform: translateY(-8px); 
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+      border-color: var(--secondary);
+    }
+    
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .pricing-card:hover::before,
+    .pricing-card.featured::before {
+      transform: scaleX(1);
+    }
+    
+    .check-icon { 
+      color: var(--success);
+      flex-shrink: 0;
+    }
+    
+    /* Popular badge - SAME PURPLE THEME */
+    .popular-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 2rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      z-index: 25;
+      white-space: nowrap;
+      box-shadow: 0 8px 25px rgba(103, 76, 196, 0.4);
+      border: 2px solid white;
+      animation: pulseGlow 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes pulseGlow {
+      0% {
+        box-shadow: 0 8px 25px rgba(103, 76, 196, 0.4);
+      }
+      100% {
+        box-shadow: 0 12px 35px rgba(103, 76, 196, 0.6);
+      }
+    }
+    
+    /* Price highlight - PURPLE GRADIENT */
+    .price-highlight {
+      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Enhanced button styles - PURPLE THEME */
+    .btn-order {
+      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-order::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .btn-order:hover::before {
+      left: 100%;
+    }
+    
+    .btn-order:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(103, 76, 196, 0.4);
+    }
+    
+    /* Secondary button - PURPLE THEME */
+    .btn-secondary {
+      background: rgba(103, 76, 196, 0.1);
+      color: var(--secondary);
+      border: 1px solid rgba(103, 76, 196, 0.2);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(103, 76, 196, 0.15);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(103, 76, 196, 0.2);
+    }
+    
+    /* Feature cards */
+    .feature-card {
+      background: white;
+      border: 1px solid #E5E7EB;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border-color: var(--secondary);
+    }
+    
+    /* Feature icons - PURPLE GRADIENT */
+    .vps-feature-icon {
+      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
+      color: white;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover .vps-feature-icon {
+      transform: scale(1.1);
+    }
+    
+    /* Animated elements */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease-out;
+    }
+    
+    /* Hero feature pills */
+    .hero-feature {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin: 0.25rem;
+    }
+    
+    .plans-grid {
+      padding-top: 1.5rem;
+    }
+    
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .pricing-card {
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+      }
+      
+      .hero-gradient {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      
+      .popular-badge {
+        top: -12px;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.7rem;
+      }
+    }
   </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
   
-  <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+  <!-- External CSS Files -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body class="bg-gray-50">
+  
+  <!-- Enhanced Header - Same as Main Site -->
+  <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="/" class="flex items-center gap-3"><img src="/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" /><span class="text-2xl font-bold text-gray-800">CORAMTIX</span></a>
+      <a href="/index" class="flex items-center gap-3 transition-transform duration-300 hover:scale-105" aria-label="CoRamTix Homepage">
+        <img src="image/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" 
+             onerror="this.src='images/favicon-96x96.png'" />
+        <span class="text-2xl font-bold text-gray-800 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">CORAMTIX</span>
+      </a>
+      
       <nav class="hidden md:flex items-center space-x-2">
-        <a href="/game-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Game Hosting</a>
-        <a href="/bot-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Bot Hosting</a>
-        <a href="/vps-hosting" class="text-indigo-600 font-semibold px-4 py-2 rounded-md">VPS Hosting</a>
-        <a href="/support" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Support</a>
-        <a href="/login" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
+        <a href="/game-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline transition-all duration-300">Game Hosting</a>
+        <a href="/bot-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline transition-all duration-300">Bot Hosting</a>
+        <a href="/vps-hosting" class="text-indigo-600 font-semibold px-4 py-2 rounded-md bg-purple-50">VPS Hosting</a>
+        <a href="/support" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline transition-all duration-300">Support</a>
+        <a href="/login" class="ml-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">Login</a>
       </nav>
-      <button id="mobile-menu-btn" class="md:hidden text-gray-700" aria-label="Toggle mobile menu"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+      
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300" aria-label="Toggle mobile menu">
+        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
-        <a href="/game-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">Game Hosting</a>
-        <a href="/bot-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">Bot Hosting</a>
-        <a href="/vps-hosting" class="block text-indigo-600 font-semibold py-2">VPS Hosting</a>
-        <a href="/support" class="block text-gray-600 hover:text-indigo-600 py-2">Support</a>
-        <a href="/login" class="block bg-indigo-600 text-white text-center mt-2 px-5 py-2.5 rounded-lg">Login</a>
-    </div>
-  </header>
+    
+        <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t px-4 pt-2 pb-4 space-y-2">
+        <a href="/game-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">
+          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M19 10a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Game Hosting
+        </a>
+        <a href="/bot-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">
+          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Bot Hosting
+        </a>
+        <a href="/vps-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">
+          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+          </svg>
+          VPS Hosting
+        </a>
+        <a href="/support" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">
+          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+          </svg>
+          Support
+        </a>
+        <a href="/login" class="block bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center font-medium mt-4 px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">Login</a>
+      </div>
+    </header>
 
   <main>
-    <section class="hero-gradient text-white">
-      <div class="container mx-auto px-6 py-20 text-center">
-        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">High-Performance VPS Hosting</h1>
-        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90">Blazing-fast, reliable, and scalable KVM virtual servers for any project.</p>
+    <!-- Hero Section - SAME PURPLE GRADIENT -->
+    <section class="hero-gradient text-white overflow-hidden relative">
+      <div class="absolute inset-0">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div class="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-300/20 rounded-full mix-blend-multiply filter blur-xl"></div>
+      </div>
+      
+      <div class="container mx-auto px-6 py-24 text-center relative z-10">
+        <div class="inline-flex items-center bg-white/20 text-white px-4 py-2 rounded-full font-semibold mb-6 backdrop-blur-sm">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          Premium VPS Hosting
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+          High-Performance <br>
+          <span class="bg-gradient-to-r from-purple-200 to-blue-200 bg-clip-text text-transparent">VPS Hosting</span>
+        </h1>
+        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90 mb-8 leading-relaxed">
+          Blazing-fast, reliable, and scalable KVM virtual servers with full root access and NVMe SSDs for any project.
+        </p>
+        
+        <!-- Key Features -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8 text-sm">
+          <span class="hero-feature">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+            Instant Deploy
+          </span>
+          <span class="hero-feature">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            Full Root Access
+          </span>
+          <span class="hero-feature">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
+            </svg>
+            NVMe SSD Storage
+          </span>
+          <span class="hero-feature">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            99.9% Uptime
+          </span>
+        </div>
+        
+        <!-- CTA Button -->
+        <a href="#vps-plans" class="inline-flex items-center bg-white text-purple-600 font-bold text-lg px-8 py-4 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 group">
+          <span>View Plans</span>
+          <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </a>
       </div>
     </section>
 
+    <!-- Plans Section -->
     <section id="vps-plans" class="py-20">
       <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center bg-purple-100 text-purple-700 px-4 py-2 rounded-full font-semibold mb-6">
+            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
+            Choose Your Plan
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">VPS Hosting Plans</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">From hobby projects to enterprise applications - scalable virtual servers for every need.</p>
+        </div>
 
-          <div class="pricing-card bg-white rounded-lg p-8 text-center flex flex-col">
-            <h3 class="text-2xl font-bold mb-2">VPS Micro</h3>
-            <p class="text-gray-500 mb-6 flex-grow">For hobby projects & testing.</p>
-            <p class="text-5xl font-extrabold mb-6">₹300<span class="text-lg font-medium">/mo</span></p>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li><span class="font-semibold text-indigo-600">1</span> Core CPU</li>
-              <li><span class="font-semibold text-indigo-600">2 GB</span> RAM</li>
-              <li><span class="font-semibold text-indigo-600">15 GB</span> NVMe Disk</li>
+        <!-- VPS Plans Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 plans-grid">
+          
+          <!-- VPS Micro -->
+          <div class="pricing-card rounded-xl p-8 text-center fade-in-up">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">VPS Micro</h3>
+            <p class="text-gray-500 mb-6">For hobby projects & testing</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹300<span class="text-lg font-medium text-gray-600">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>1 Core CPU</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>2 GB RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>15 GB NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Full Root Access</span>
+              </li>
             </ul>
-            <a href="/ticket" class="mt-auto block w-full bg-indigo-100 text-indigo-700 font-semibold py-3 rounded-lg hover:bg-indigo-200">Order Now</a>
+            <a href="/ticket" class="btn-secondary block w-full text-center font-semibold py-3 rounded-lg">Order Now</a>
           </div>
 
-          <div class="pricing-card bg-white rounded-lg p-8 text-center flex flex-col">
-            <h3 class="text-2xl font-bold mb-2">VPS Lite</h3>
-            <p class="text-gray-500 mb-6 flex-grow">Great for personal websites.</p>
-            <p class="text-5xl font-extrabold mb-6">₹450<span class="text-lg font-medium">/mo</span></p>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li><span class="font-semibold text-indigo-600">1</span> Core CPU</li>
-              <li><span class="font-semibold text-indigo-600">6 GB</span> RAM</li>
-              <li><span class="font-semibold text-indigo-600">20 GB</span> NVMe Disk</li>
+          <!-- VPS Lite -->
+          <div class="pricing-card rounded-xl p-8 text-center fade-in-up">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">VPS Lite</h3>
+            <p class="text-gray-500 mb-6">Great for personal websites</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹450<span class="text-lg font-medium text-gray-600">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>1 Core CPU</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>6 GB RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>20 GB NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Full Root Access</span>
+              </li>
             </ul>
-            <a href="/ticket" class="mt-auto block w-full bg-indigo-100 text-indigo-700 font-semibold py-3 rounded-lg hover:bg-indigo-200">Order Now</a>
+            <a href="/ticket" class="btn-secondary block w-full text-center font-semibold py-3 rounded-lg">Order Now</a>
           </div>
 
-          <div class="pricing-card bg-white rounded-lg p-8 text-center flex flex-col">
-            <h3 class="text-2xl font-bold mb-2">VPS Start</h3>
-            <p class="text-gray-500 mb-6 flex-grow">Ideal for small applications.</p>
-            <p class="text-5xl font-extrabold mb-6">₹600<span class="text-lg font-medium">/mo</span></p>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li><span class="font-semibold text-indigo-600">2</span> Cores CPU</li>
-              <li><span class="font-semibold text-indigo-600">8 GB</span> RAM</li>
-              <li><span class="font-semibold text-indigo-600">25 GB</span> NVMe Disk</li>
+          <!-- VPS Start -->
+          <div class="pricing-card rounded-xl p-8 text-center fade-in-up">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">VPS Start</h3>
+            <p class="text-gray-500 mb-6">Ideal for small applications</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹600<span class="text-lg font-medium text-gray-600">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>2 Cores CPU</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>8 GB RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>25 GB NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Full Root Access</span>
+              </li>
             </ul>
-            <a href="/ticket" class="mt-auto block w-full bg-indigo-100 text-indigo-700 font-semibold py-3 rounded-lg hover:bg-indigo-200">Order Now</a>
+            <a href="/ticket" class="btn-secondary block w-full text-center font-semibold py-3 rounded-lg">Order Now</a>
           </div>
 
-          <div class="pricing-card bg-white rounded-lg p-8 text-center flex flex-col">
-            <h3 class="text-2xl font-bold mb-2">VPS Boost</h3>
-            <p class="text-gray-500 mb-6 flex-grow">For growing web projects.</p>
-            <p class="text-5xl font-extrabold mb-6">₹800<span class="text-lg font-medium">/mo</span></p>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li><span class="font-semibold text-indigo-600">3</span> Cores CPU</li>
-              <li><span class="font-semibold text-indigo-600">12 GB</span> RAM</li>
-              <li><span class="font-semibold text-indigo-600">40 GB</span> NVMe Disk</li>
+          <!-- VPS Boost -->
+          <div class="pricing-card rounded-xl p-8 text-center fade-in-up">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">VPS Boost</h3>
+            <p class="text-gray-500 mb-6">For growing web projects</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹800<span class="text-lg font-medium text-gray-600">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>3 Cores CPU</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>12 GB RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>40 GB NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Full Root Access</span>
+              </li>
             </ul>
-            <a href="/ticket" class="mt-auto block w-full bg-indigo-100 text-indigo-700 font-semibold py-3 rounded-lg hover:bg-indigo-200">Order Now</a>
+            <a href="/ticket" class="btn-secondary block w-full text-center font-semibold py-3 rounded-lg">Order Now</a>
+          </div>
+
+          <!-- VPS Pro - Featured -->
+          <div class="pricing-card featured rounded-xl p-8 text-center fade-in-up">
+            <div class="popular-badge">MOST POPULAR</div>
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">VPS Pro</h3>
+            <p class="text-purple-600 font-semibold mb-6">Perfect for business applications</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹1000<span class="text-lg font-medium text-gray-600">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>4 Cores CPU</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>16 GB RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>60 GB NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Full Root Access</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Priority Support</span>
+              </li>
+            </ul>
+            <a href="/ticket" class="btn-order block w-full text-white font-semibold py-3 rounded-lg">Order Now</a>
+          </div>
+
+          <!-- VPS Elite -->
+          <div class="pricing-card rounded-xl p-8 text-center fade-in-up">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">VPS Elite</h3>
+            <p class="text-gray-500 mb-6">For resource-intensive tasks</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹1600<span class="text-lg font-medium text-gray-600">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>6 Cores CPU</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>24 GB RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>90 GB NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Full Root Access</span>
+              </li>
+            </ul>
+            <a href="/ticket" class="btn-secondary block w-full text-center font-semibold py-3 rounded-lg">Order Now</a>
+          </div>
+
+          <!-- VPS Ultra -->
+          <div class="pricing-card rounded-xl p-8 text-center fade-in-up">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">VPS Ultra</h3>
+            <p class="text-gray-500 mb-6">High-performance for large scale apps</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹2200<span class="text-lg font-medium text-gray-600">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>8 Cores CPU</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>32 GB RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>150 GB NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Full Root Access</span>
+              </li>
+            </ul>
+            <a href="/ticket" class="btn-secondary block w-full text-center font-semibold py-3 rounded-lg">Order Now</a>
+          </div>
+
+          <!-- VPS Titan -->
+          <div class="pricing-card rounded-xl p-8 text-center fade-in-up">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">VPS Titan</h3>
+            <p class="text-gray-500 mb-6">Extreme power for enterprise use</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹3400<span class="text-lg font-medium text-gray-600">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>24 Cores CPU</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>64 GB RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>350 GB NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Full Root Access</span>
+              </li>
+            </ul>
+            <a href="/ticket" class="btn-secondary block w-full text-center font-semibold py-3 rounded-lg">Order Now</a>
+          </div>
+
+          <!-- VPS Omega -->
+          <div class="pricing-card rounded-xl p-8 text-center fade-in-up">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">VPS Omega</h3>
+            <p class="text-gray-500 mb-6">Ultimate performance for massive workloads</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹5900<span class="text-lg font-medium text-gray-600">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>32 Cores CPU</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>128 GB RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>500 GB NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Full Root Access</span>
+              </li>
+            </ul>
+            <a href="/ticket" class="btn-secondary block w-full text-center font-semibold py-3 rounded-lg">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-white py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center bg-purple-100 text-purple-700 px-4 py-2 rounded-full font-semibold mb-6">
+            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
+            Everything Included
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">All VPS Plans Include</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">Every virtual server comes with these premium features at no extra cost</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div class="feature-card text-center">
+            <div class="vps-feature-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">KVM Virtualization</h3>
+            <p class="text-gray-600">Full virtualization with dedicated resources and complete isolation for maximum performance.</p>
           </div>
           
-          <div class="pricing-card bg-white rounded-lg p-8 text-center featured flex flex-col">
-            <p class="bg-indigo-600 text-white text-sm font-bold py-1 px-4 rounded-full inline-block mb-4 -mt-12">Most Popular</p>
-            <h3 class="text-2xl font-bold mb-2">VPS Pro</h3>
-            <p class="text-gray-500 mb-6 flex-grow">Perfect for business applications.</p>
-            <p class="text-5xl font-extrabold mb-6">₹1000<span class="text-lg font-medium">/mo</span></p>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li><span class="font-semibold text-indigo-600">4</span> Cores CPU</li>
-              <li><span class="font-semibold text-indigo-600">16 GB</span> RAM</li>
-              <li><span class="font-semibold text-indigo-600">60 GB</span> NVMe Disk</li>
-            </ul>
-            <a href="/ticket" class="mt-auto block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Order Now</a>
+          <div class="feature-card text-center">
+            <div class="vps-feature-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m13 0h-6m-2-5h6m2 5h-6m-2-5h6"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Full Root Access</h3>
+            <p class="text-gray-600">Complete control over your server with root access to install any software and customize configurations.</p>
           </div>
-
-          <div class="pricing-card bg-white rounded-lg p-8 text-center flex flex-col">
-            <h3 class="text-2xl font-bold mb-2">VPS Elite</h3>
-            <p class="text-gray-500 mb-6 flex-grow">For resource-intensive tasks.</p>
-            <p class="text-5xl font-extrabold mb-6">₹1600<span class="text-lg font-medium">/mo</span></p>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li><span class="font-semibold text-indigo-600">6</span> Cores CPU</li>
-              <li><span class="font-semibold text-indigo-600">24 GB</span> RAM</li>
-              <li><span class="font-semibold text-indigo-600">90 GB</span> NVMe Disk</li>
-            </ul>
-            <a href="/ticket" class="mt-auto block w-full bg-indigo-100 text-indigo-700 font-semibold py-3 rounded-lg hover:bg-indigo-200">Order Now</a>
+          
+          <div class="feature-card text-center">
+            <div class="vps-feature-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Instant Deployment</h3>
+            <p class="text-gray-600">Launch your VPS in minutes with automated setup and instant activation.</p>
           </div>
-
-          <div class="pricing-card bg-white rounded-lg p-8 text-center flex flex-col">
-            <h3 class="text-2xl font-bold mb-2">VPS Ultra</h3>
-            <p class="text-gray-500 mb-6 flex-grow">High-performance for large scale apps.</p>
-            <p class="text-5xl font-extrabold mb-6">₹2200<span class="text-lg font-medium">/mo</span></p>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li><span class="font-semibold text-indigo-600">8</span> Cores CPU</li>
-              <li><span class="font-semibold text-indigo-600">32 GB</span> RAM</li>
-              <li><span class="font-semibold text-indigo-600">150 GB</span> NVMe Disk</li>
-            </ul>
-            <a href="/ticket" class="mt-auto block w-full bg-indigo-100 text-indigo-700 font-semibold py-3 rounded-lg hover:bg-indigo-200">Order Now</a>
-          </div>
-
-          <div class="pricing-card bg-white rounded-lg p-8 text-center flex flex-col">
-            <h3 class="text-2xl font-bold mb-2">VPS Titan</h3>
-            <p class="text-gray-500 mb-6 flex-grow">Extreme power for enterprise use.</p>
-            <p class="text-5xl font-extrabold mb-6">₹3400<span class="text-lg font-medium">/mo</span></p>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li><span class="font-semibold text-indigo-600">24</span> Cores CPU</li>
-              <li><span class="font-semibold text-indigo-600">64 GB</span> RAM</li>
-              <li><span class="font-semibold text-indigo-600">350 GB</span> NVMe Disk</li>
-            </ul>
-            <a href="/ticket" class="mt-auto block w-full bg-indigo-100 text-indigo-700 font-semibold py-3 rounded-lg hover:bg-indigo-200">Order Now</a>
-          </div>
-
-          <div class="pricing-card bg-white rounded-lg p-8 text-center flex flex-col">
-            <h3 class="text-2xl font-bold mb-2">VPS Omega</h3>
-            <p class="text-gray-500 mb-6 flex-grow">Ultimate performance for massive workloads.</p>
-            <p class="text-5xl font-extrabold mb-6">₹5900<span class="text-lg font-medium">/mo</span></p>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li><span class="font-semibold text-indigo-600">32</span> Cores CPU</li>
-              <li><span class="font-semibold text-indigo-600">128 GB</span> RAM</li>
-              <li><span class="font-semibold text-indigo-600">500 GB</span> NVMe Disk</li>
-            </ul>
-            <a href="/ticket" class="mt-auto block w-full bg-indigo-100 text-indigo-700 font-semibold py-3 rounded-lg hover:bg-indigo-200">Order Now</a>
-          </div>
-
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-gray-800 text-white">
-    <div class="container mx-auto px-6 py-12">
-      <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-8">
-        <a href="/terms-of-service" class="text-gray-400 hover:text-white">Terms of service</a>
-        <a href="/privacy-policy" class="text-gray-400 hover:text-white">Privacy policy</a>
-        <a href="/refund-policy" class="text-gray-400 hover:text-white">Refund policy</a>
-      </nav>
-      <div class="text-center text-gray-500 border-t border-gray-700 pt-8">
-        <p>&copy; <span id="copyright-year"></span> CoRamTix — Premium Server Hosting</p>
+  <!-- Enhanced Footer -->
+  <footer class="bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white">
+    <div class="container mx-auto px-6 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center gap-3 mb-6">
+            <img src="image/favicon.svg" alt="CoRamTix" class="h-10 w-10">
+            <span class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">CORAMTIX</span>
+          </div>
+          <p class="text-gray-300 leading-relaxed">Premium VPS hosting with enterprise-grade infrastructure and 24/7 expert support.</p>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-6">VPS Hosting</h4>
+          <nav class="space-y-3">
+            <a href="/vps-hosting" class="block text-gray-300 hover:text-purple-400">VPS Plans</a>
+            <a href="/game-hosting" class="block text-gray-300 hover:text-purple-400">Game Hosting</a>
+            <a href="/support" class="block text-gray-300 hover:text-purple-400">Setup Guide</a>
+            <a href="/ticket" class="block text-gray-300 hover:text-purple-400">Get Support</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Other Services</h4>
+          <nav class="space-y-3">
+            <a href="/game-hosting" class="block text-gray-300 hover:text-purple-400">Game Hosting</a>
+            <a href="/bot-hosting" class="block text-gray-300 hover:text-purple-400">Bot Hosting</a>
+            <a href="/rust-hosting" class="block text-gray-300 hover:text-purple-400">Rust Hosting</a>
+            <a href="/support" class="block text-gray-300 hover:text-purple-400">Support Center</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Get Help</h4>
+          <nav class="space-y-3">
+            <a href="/support" class="block text-gray-300 hover:text-purple-400">Help Center</a>
+            <a href="/ticket" class="block text-gray-300 hover:text-purple-400">Submit Ticket</a>
+            <a href="/support" class="block text-gray-300 hover:text-purple-400">Contact Support</a>
+            <a href="/discord" class="block text-gray-300 hover:text-purple-400">Join Discord</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-700 pt-8 text-center">
+        <p class="text-gray-400">&copy; <span id="copyright-year">2025</span> CoRamTix. All rights reserved. | Premium VPS Hosting</p>
       </div>
     </div>
   </footer>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
-      if (mobileMenuBtn && mobileMenu) { mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
+      
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+      
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
     });
   </script>
+<!-- External JavaScript Files -->
+  <script src="main.js"></script>
+
 </body>
 </html>
