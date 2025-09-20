@@ -13,7 +13,7 @@ class CoRamTixPreloader {
     this.messages = [
       'Loading premium experience...',
       'Initializing servers...',
-      'Preparing dashboard...',
+      'Preparing Website ...',
       'Optimizing performance...',
       'Almost ready...',
       'Welcome to CoRamTix!'
@@ -281,4 +281,5 @@ document.addEventListener('visibilitychange', () => {
     }
   }
 });
+
 /* End of CoRamTix Preloader Script */
