@@ -26,6 +26,8 @@
   --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-dark));
   --gradient-hero: linear-gradient(135deg, #674CC4, #4D2FDB);
   --gradient-text: linear-gradient(135deg, #E0E7FF, #FFFFFF);
+  --gradient-success: linear-gradient(135deg, #10B981, #059669);
+  --gradient-purple-alt: linear-gradient(135deg, #8B5CF6, #7C3AED);
   
   /* Typography */
   --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -549,42 +551,237 @@ strong {
   transform: scale(1.05);
 }
 
-    /* FIXED Popular badge - NO OVERLAP */
-    .popular-badge {
-      position: absolute;
-      top: -12px; /* Moved further up */
-      left: 50%;
-      transform: translateX(-50%); /* Center it horizontally */
-      background: linear-gradient(135deg, #10B981, #059669);
-      color: white;
-      padding: 0.5rem 1.25rem; /* Increased padding */
-      border-radius: 1rem;
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      z-index: 20;
-      white-space: nowrap;
-      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-    }
-    
-    /* Alternative badge for different styles */
-    .popular-badge-alt {
-      position: absolute;
-      top: -6px;
-      right: 1rem;
-      background: linear-gradient(135deg, #8B5CF6, #7C3AED);
-      color: white;
-      padding: 0.35rem 0.85rem;
-      border-radius: 0.5rem;
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.025em;
-      z-index: 20;
-      box-shadow: 0 2px 8px rgba(139, 92, 246, 0.3);
-    }
-    
+/* ==========================================
+   MINECRAFT HOSTING SPECIFIC STYLES
+   ========================================== */
+
+/* Minecraft Service Card - Enhanced */
+.minecraft-service-card {
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  border: 2px solid var(--border-light);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(103, 76, 196, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: visible;
+  margin-top: 2rem; /* Space for badges */
+}
+
+.minecraft-service-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(103, 76, 196, 0.2);
+  border-color: var(--primary);
+}
+
+/* Minecraft Hero Image */
+.minecraft-hero-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+  border-radius: 1.5rem 1.5rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.minecraft-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+/* Popular badges - FIXED positioning */
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-success);
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  z-index: 25;
+  white-space: nowrap;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+  border: 2px solid white;
+  animation: pulseGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+  }
+  100% {
+    box-shadow: 0 12px 35px rgba(16, 185, 129, 0.6);
+  }
+}
+
+.popular-badge-alt {
+  position: absolute;
+  top: -8px;
+  right: 1.5rem;
+  background: var(--gradient-purple-alt);
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 25;
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.4);
+  border: 2px solid white;
+}
+
+/* Minecraft Title Section */
+.minecraft-title-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.minecraft-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.minecraft-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.minecraft-price {
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.minecraft-price-unit {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Instant Setup Badge */
+.instant-setup-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.instant-setup-badge::before {
+  content: '✓';
+  margin-right: 0.5rem;
+  font-weight: 800;
+}
+
+/* Minecraft CTA Button */
+.minecraft-cta-button {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 8px 25px rgba(103, 76, 196, 0.3);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.minecraft-cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.minecraft-cta-button:hover::before {
+  left: 100%;
+}
+
+.minecraft-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(103, 76, 196, 0.4);
+  color: white;
+}
+
+.minecraft-cta-button::after {
+  content: '→';
+  transition: transform 0.3s ease;
+}
+
+.minecraft-cta-button:hover::after {
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments for minecraft cards */
+@media (max-width: 768px) {
+  .minecraft-service-card {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .popular-badge {
+    top: -12px;
+    padding: 0.5rem 1.2rem;
+    font-size: 0.7rem;
+  }
+  
+  .popular-badge-alt {
+    top: -6px;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.65rem;
+  }
+  
+  .minecraft-price {
+    font-size: 2.8rem;
+  }
+  
+  .minecraft-hero-image {
+    height: 160px;
+  }
+}
+
+/* ==========================================
+   END MINECRAFT HOSTING STYLES
+   ========================================== */
+
 .service-icon {
   font-size: 3rem;
   margin-bottom: var(--spacing-lg);
@@ -1026,15 +1223,12 @@ strong {
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
-
 .font-bold { font-weight: 700; }
 .font-semibold { font-weight: 600; }
 .font-medium { font-weight: 500; }
-
 .text-primary { color: var(--text-primary); }
 .text-secondary { color: var(--text-secondary); }
 .text-muted { color: var(--text-muted); }
-
 .bg-white { background-color: var(--bg-white); }
 .bg-light { background-color: var(--bg-light); }
 
@@ -1057,6 +1251,60 @@ strong {
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-lg);
+  }
+  
+  .nav-container {
+    padding: 0 var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .hero {
+    padding: calc(80px + var(--spacing-3xl)) var(--spacing-lg) var(--spacing-3xl);
+  }
+  
+  .services-grid,
+  .features-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-buttons,
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .service-card,
+  .feature-item,
+  .testimonial-card {
+    padding: var(--spacing-xl);
+  }
 }
 
 /* Print Styles */
