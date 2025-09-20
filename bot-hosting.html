@@ -2,129 +2,661 @@
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-  <title>CoRamTix - Bot Hosting Plans</title>
-  <meta name="description" content="Reliable 24/7 hosting for your Discord bots, trading bots, and other applications. Instant setup with Python, Node.js, and Java support.">
-  <!-- Favicon and Meta Tags -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta property="og:title" content="CoRamTix - Bot Hosting Plans">
-  <meta property="og:description" content="Reliable 24/7 hosting for your Discord bots, trading bots, and other applications.">
-  <meta property="og:image" content="/ccbanner.png">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discord Bot Hosting - CoRamTix | 24/7 Uptime Starting at ₹79/month</title>
+  <meta name="description" content="Reliable 24/7 Discord bot hosting with automatic restarts, real-time monitoring, and zero-downtime deployments. Python, Node.js & Java support. Starting at ₹79/month.">
+  <meta name="keywords" content="discord bot hosting, bot hosting, 24/7 bot hosting, python bot hosting, nodejs bot hosting, discord bots, cheap bot hosting">
   
+  <!-- Fixed Favicon and Meta Tags with Correct Paths -->
+  <link rel="icon" type="image/x-icon" href="image/favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="image/favicon.svg" />
+  <link rel="shortcut icon" href="image/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="image/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="image/favicon-96x96.png" />
+  <link rel="manifest" href="image/web-app-manifest.json" />
+
+  <!-- Open Graph with Correct Paths -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://coramtix.in/bot-hosting">
+  <meta property="og:title" content="Discord Bot Hosting - CoRamTix">
+  <meta property="og:description" content="Reliable 24/7 Discord bot hosting with automatic restarts and real-time monitoring. Starting at ₹79/month.">
+  <meta property="og:image" content="image/ccbanner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Discord Bot Hosting - CoRamTix">
+  <meta name="twitter:description" content="Reliable 24/7 Discord bot hosting with automatic restarts and real-time monitoring.">
+  <meta name="twitter:image" content="image/ccbanner.png">
+
+  <!-- Performance Optimizations -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    :root { --primary: #1A1A1A; --secondary: #674CC4; --accent: #8E6CEF; --deep-purple-blue: #4D2FDB; }
-    body { font-family: 'Poppins', sans-serif; background-color: #F9FAFB; color: #1F2937; }
-    .hero-gradient { background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue)); }
-    .nav-link-underline:hover { color: var(--secondary); }
-    .pricing-card { border: 1px solid #e5e7eb; transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .pricing-card:hover, .pricing-card.featured { transform: scale(1.05); box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); border-color: var(--secondary); }
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
   
-  <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+  <!-- Enhanced Styles - Same Theme as Main Site -->
+  <style>
+    :root { 
+      --primary: #1A1A1A; 
+      --secondary: #674CC4; 
+      --accent: #8E6CEF; 
+      --deep-purple-blue: #4D2FDB;
+      --success: #10B981;
+      --warning: #F59E0B;
+      --bot-blue: #5865F2;
+      --bot-blue-light: #7289DA;
+    }
+    
+    body { 
+      font-family: 'Poppins', sans-serif; 
+      background: #F9FAFB; 
+      color: #1F2937; 
+      overflow-x: hidden;
+    }
+    
+    /* Hero gradient - same as main site */
+    .hero-gradient { 
+      background: linear-gradient(135deg, var(--bot-blue), var(--secondary)); 
+    }
+    
+    /* Navigation styles */
+    .nav-link-underline:hover { 
+      color: var(--secondary); 
+      background: rgba(103, 76, 196, 0.05);
+    }
+    
+    /* Enhanced pricing cards */
+    .pricing-card { 
+      border: 1px solid #e5e7eb; 
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: visible; /* Changed from hidden to visible for badges */
+      background: white;
+      margin-top: 1.5rem; /* Added margin to accommodate badges */
+    }
+    
+    .pricing-card:hover, .pricing-card.featured { 
+      transform: translateY(-8px); 
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
+      border-color: var(--bot-blue);
+    }
+    
+    .pricing-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(135deg, var(--bot-blue), var(--secondary));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .pricing-card:hover::before,
+    .pricing-card.featured::before {
+      transform: scaleX(1);
+    }
+    
+    .check-icon { 
+      color: var(--success);
+      flex-shrink: 0;
+    }
+    
+    /* Popular badge - FIXED positioning */
+    .popular-badge {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--bot-blue), #4338CA);
+      color: white;
+      padding: 0.6rem 1.5rem;
+      border-radius: 2rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      z-index: 25;
+      white-space: nowrap;
+      box-shadow: 0 8px 25px rgba(88, 101, 242, 0.4);
+      border: 2px solid white;
+      animation: pulseGlow 2s ease-in-out infinite alternate;
+    }
+    
+    @keyframes pulseGlow {
+      0% {
+        box-shadow: 0 8px 25px rgba(88, 101, 242, 0.4);
+      }
+      100% {
+        box-shadow: 0 12px 35px rgba(88, 101, 242, 0.6);
+      }
+    }
+    
+    /* Price highlight */
+    .price-highlight {
+      background: linear-gradient(135deg, var(--bot-blue), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    /* Enhanced button styles */
+    .btn-order {
+      background: linear-gradient(135deg, var(--bot-blue), var(--secondary));
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-order::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .btn-order:hover::before {
+      left: 100%;
+    }
+    
+    .btn-order:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(88, 101, 242, 0.4);
+    }
+    
+    /* Secondary button */
+    .btn-secondary {
+      background: rgba(88, 101, 242, 0.1);
+      color: var(--bot-blue);
+      border: 1px solid rgba(88, 101, 242, 0.2);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(88, 101, 242, 0.15);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(88, 101, 242, 0.2);
+    }
+    
+    /* Feature cards */
+    .feature-card {
+      background: white;
+      border: 1px solid #E5E7EB;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border-color: var(--bot-blue);
+    }
+    
+    /* Bot-specific feature icons */
+    .bot-feature-icon {
+      background: linear-gradient(135deg, var(--bot-blue), #4338CA);
+      color: white;
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .feature-card:hover .bot-feature-icon {
+      transform: scale(1.1);
+    }
+    
+    /* Animated elements */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in-up {
+      animation: fadeInUp 0.6s ease-out;
+    }
+    
+    /* Hero feature pills */
+    .hero-feature {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.875rem;
+      font-weight: 500;
+      margin: 0.25rem;
+    }
+    
+    /* Grid spacing adjustment for badges */
+    .plans-grid {
+      padding-top: 1.5rem; /* Extra space for badges */
+    }
+    
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .pricing-card {
+        margin-bottom: 3rem; /* More space on mobile */
+        margin-top: 2rem;
+      }
+      
+      .hero-gradient {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+      
+      .popular-badge {
+        top: -12px;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+  
+  <!-- External CSS Files -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Enhanced Header - Same as Main Site -->
+  <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="/" class="flex items-center gap-3"><img src="/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" /><span class="text-2xl font-bold text-gray-800">CORAMTIX</span></a>
+      <a href="/index" class="flex items-center gap-3 transition-transform duration-300 hover:scale-105" aria-label="CoRamTix Homepage">
+        <img src="image/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" 
+             onerror="this.src='images/favicon-96x96.png'" />
+        <span class="text-2xl font-bold text-gray-800 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">CORAMTIX</span>
+      </a>
+      
       <nav class="hidden md:flex items-center space-x-2">
-        <a href="/game-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Game Hosting</a>
-        <a href="/bot-hosting" class="text-indigo-600 font-semibold px-4 py-2 rounded-md">Bot Hosting</a>
-        <a href="/vps-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">VPS Hosting</a>
-        <a href="/support" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline">Support</a>
-        <a href="/login" class="ml-4 bg-indigo-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:bg-indigo-700">Login</a>
+        <a href="/game-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline transition-all duration-300">Game Hosting</a>
+        <a href="/bot-hosting" class="text-indigo-600 font-semibold px-4 py-2 rounded-md bg-purple-50">Bot Hosting</a>
+        <a href="/vps-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline transition-all duration-300">VPS Hosting</a>
+        <a href="/support" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline transition-all duration-300">Support</a>
+        <a href="/login" class="ml-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">Login</a>
       </nav>
-      <button id="mobile-menu-btn" class="md:hidden text-gray-700" aria-label="Toggle mobile menu"><svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16m-7 6h7" /></svg></button>
+      
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300" aria-label="Toggle mobile menu">
+        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2">
-        <a href="/game-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">Game Hosting</a>
-        <a href="/bot-hosting" class="block text-indigo-600 font-semibold py-2">Bot Hosting</a>
-        <a href="/vps-hosting" class="block text-gray-600 hover:text-indigo-600 py-2">VPS Hosting</a>
-        <a href="/support" class="block text-gray-600 hover:text-indigo-600 py-2">Support</a>
-        <a href="/login" class="block bg-indigo-600 text-white text-center mt-2 px-5 py-2.5 rounded-lg">Login</a>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t px-4 pt-2 pb-4 space-y-2">
+      <a href="/game-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">Game Hosting</a>
+      <a href="/bot-hosting" class="block text-indigo-600 font-semibold py-3 px-2 rounded-lg bg-purple-50">Bot Hosting</a>
+      <a href="/vps-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">VPS Hosting</a>
+      <a href="/support" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">Support</a>
+      <a href="/login" class="block bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center font-medium mt-4 px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">Login</a>
     </div>
   </header>
 
   <main>
-    <section class="hero-gradient text-white">
-      <div class="container mx-auto px-6 py-20 text-center">
-        <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">24/7 Bot Hosting</h1>
-        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90">Keep your Discord bots and applications online around the clock with our reliable, low-cost hosting.</p>
+    <!-- Enhanced Hero Section -->
+    <section class="hero-gradient text-white overflow-hidden relative">
+      <!-- Animated Background -->
+      <div class="absolute inset-0">
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
+        <div class="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-300/20 rounded-full mix-blend-multiply filter blur-xl"></div>
+      </div>
+      
+      <div class="container mx-auto px-6 py-24 text-center relative z-10">
+        <div class="inline-flex items-center bg-white/20 text-white px-4 py-2 rounded-full font-semibold mb-6 backdrop-blur-sm">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.010c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/>
+          </svg>
+          24/7 Bot Hosting
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+          Discord Bot <br>
+          <span class="bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent">Hosting</span>
+        </h1>
+        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90 mb-8 leading-relaxed">
+          Keep your Discord bots online 24/7 with <strong>automatic restarts</strong>, real-time monitoring, and <strong>zero-downtime deployments</strong>. Perfect for all bot types.
+        </p>
+        
+        <!-- Key Features -->
+        <div class="flex flex-wrap justify-center gap-4 mb-8 text-sm">
+          <span class="hero-feature">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+            Auto Restart
+          </span>
+          <span class="hero-feature">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+            </svg>
+            Real-time Logs
+          </span>
+          <span class="hero-feature">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            99.9% Uptime
+          </span>
+          <span class="hero-feature">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+            </svg>
+            Python & Node.js
+          </span>
+        </div>
+        
+        <!-- CTA Button -->
+        <a href="#bot-plans" class="inline-flex items-center bg-white text-indigo-600 font-bold text-lg px-8 py-4 rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 group">
+          <span>View Plans</span>
+          <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </a>
       </div>
     </section>
 
+    <!-- Enhanced Bot Hosting Plans Section -->
     <section id="bot-plans" class="py-20">
       <div class="container mx-auto px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full font-semibold mb-6">
+            <span class="w-2 h-2 bg-indigo-500 rounded-full mr-2 animate-pulse"></span>
+            Choose Your Plan
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Discord Bot Hosting Plans</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">Reliable hosting for all types of bots - from simple utility bots to complex trading bots and community managers.</p>
+        </div>
 
-          <div class="pricing-card bg-white rounded-lg p-8 text-center">
-            <h3 class="text-2xl font-bold mb-2">Nano Bot</h3>
-            <p class="text-gray-500 mb-6">For simple bots and testing.</p>
-            <p class="text-5xl font-extrabold mb-6">₹79<span class="text-lg font-medium">/mo</span></p>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li><span class="font-semibold text-indigo-600">1 GB</span> NVMe SSD</li>
-              <li><span class="font-semibold text-indigo-600">512 MB</span> RAM</li>
-              <li><span class="font-semibold text-indigo-600">100%</span> CPU Power</li>
+        <!-- Bot Plans Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start plans-grid">
+          
+          <!-- Nano Bot Plan -->
+          <div class="pricing-card rounded-xl p-8 text-center fade-in-up">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">Nano Bot</h3>
+            <p class="text-gray-500 mb-6">Perfect for simple bots and testing</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹79<span class="text-lg font-medium text-gray-600">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>512 MB</strong> RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>1 GB</strong> NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>100%</strong> CPU Power</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>24/7 Uptime</span>
+              </li>
             </ul>
-            <a href="/ticket" class="block w-full bg-indigo-100 text-indigo-700 font-semibold py-3 rounded-lg hover:bg-indigo-200">Deploy Now</a>
+            <a href="/ticket" class="btn-secondary block w-full text-center font-semibold py-3 rounded-lg transition-all duration-300">Deploy Now</a>
           </div>
 
-          <div class="pricing-card bg-white rounded-lg p-8 text-center featured">
-            <p class="bg-indigo-600 text-white text-sm font-bold py-1 px-4 rounded-full inline-block mb-4 -mt-12">Best Value</p>
-            <h3 class="text-2xl font-bold mb-2">Mega Bot</h3>
-            <p class="text-gray-500 mb-6">For popular, feature-rich bots.</p>
-            <p class="text-5xl font-extrabold mb-6">₹199<span class="text-lg font-medium">/mo</span></p>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li><span class="font-semibold text-indigo-600">3 GB</span> NVMe SSD</li>
-              <li><span class="font-semibold text-indigo-600">1 GB</span> RAM</li>
-              <li><span class="font-semibold text-indigo-600">200%</span> CPU Power</li>
+          <!-- Mega Bot Plan - Featured -->
+          <div class="pricing-card featured rounded-xl p-8 text-center fade-in-up" style="animation-delay: 0.2s">
+            <div class="popular-badge">DEVELOPER FAVORITE</div>
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">Mega Bot</h3>
+            <p class="text-indigo-600 font-semibold mb-6">Most Popular Choice</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹199<span class="text-lg font-medium text-gray-600">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>1 GB</strong> RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>3 GB</strong> NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>200%</strong> CPU Power</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Priority Support</span>
+              </li>
             </ul>
-            <a href="/ticket" class="block w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg hover:bg-indigo-700">Deploy Now</a>
+            <a href="/ticket" class="btn-order block w-full text-white font-semibold py-3 rounded-lg">Deploy Now</a>
           </div>
 
-          <div class="pricing-card bg-white rounded-lg p-8 text-center">
-            <h3 class="text-2xl font-bold mb-2">Giga Bot</h3>
-            <p class="text-gray-500 mb-6">For large-scale applications.</p>
-            <p class="text-5xl font-extrabold mb-6">₹399<span class="text-lg font-medium">/mo</span></p>
-            <ul class="space-y-4 text-gray-600 mb-8">
-              <li><span class="font-semibold text-indigo-600">5 GB</span> NVMe SSD</li>
-              <li><span class="font-semibold text-indigo-600">2 GB</span> RAM</li>
-              <li><span class="font-semibold text-indigo-600">300%</span> CPU Power</li>
+          <!-- Giga Bot Plan -->
+          <div class="pricing-card rounded-xl p-8 text-center fade-in-up" style="animation-delay: 0.4s">
+            <h3 class="text-2xl font-bold mb-2 text-gray-800">Giga Bot</h3>
+            <p class="text-gray-500 mb-6">For large-scale applications</p>
+            <p class="text-5xl font-extrabold mb-6 price-highlight">₹399<span class="text-lg font-medium text-gray-600">/mo</span></p>
+            <ul class="space-y-4 text-gray-600 mb-8 text-left">
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>2 GB</strong> RAM</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>5 GB</strong> NVMe SSD</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span><strong>300%</strong> CPU Power</span>
+              </li>
+              <li class="flex items-center">
+                <svg class="h-5 w-5 check-icon mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>VIP Support</span>
+              </li>
             </ul>
-            <a href="/ticket" class="block w-full bg-indigo-100 text-indigo-700 font-semibold py-3 rounded-lg hover:bg-indigo-200">Deploy Now</a>
+            <a href="/ticket" class="btn-secondary block w-full text-center font-semibold py-3 rounded-lg transition-all duration-300">Deploy Now</a>
           </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Enhanced Features Section -->
+    <section class="bg-white py-20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center bg-purple-100 text-purple-700 px-4 py-2 rounded-full font-semibold mb-6">
+            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
+            Why Choose Us
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Perfect for Discord Communities</h2>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">Everything you need to keep your Discord bots running smoothly 24/7</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- Auto Restart Feature -->
+          <div class="feature-card text-center">
+            <div class="bot-feature-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Auto Restart</h3>
+            <p class="text-gray-600">Automatic restart on crash ensures your bot stays online 24/7 without manual intervention.</p>
+          </div>
+          
+          <!-- Real-time Monitoring -->
+          <div class="feature-card text-center">
+            <div class="bot-feature-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Real-time Logs</h3>
+            <p class="text-gray-600">Monitor your bot's activity with live console logs and error tracking for easy debugging.</p>
+          </div>
+          
+          <!-- Multi-language Support -->
+          <div class="feature-card text-center">
+            <div class="bot-feature-icon">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2">Multi-Language</h3>
+            <p class="text-gray-600">Support for Python, Node.js, Java, and more with easy file upload and deployment.</p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="bg-gray-800 text-white">
-    <div class="container mx-auto px-6 py-12">
-      <nav class="flex justify-center flex-wrap gap-x-6 gap-y-2 mb-8">
-        <a href="/terms-of-service" class="text-gray-400 hover:text-white">Terms of service</a>
-        <a href="/privacy-policy" class="text-gray-400 hover:text-white">Privacy policy</a>
-        <a href="/refund-policy" class="text-gray-400 hover:text-white">Refund policy</a>
-      </nav>
-      <div class="text-center text-gray-500 border-t border-gray-700 pt-8">
-        <p>&copy; <span id="copyright-year"></span> CoRamTix — Premium Server Hosting</p>
+  <!-- Enhanced Footer - Same as Main Site -->
+  <footer class="bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white">
+    <div class="container mx-auto px-6 py-16">
+      <!-- Footer Content -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <!-- Brand Section -->
+        <div class="md:col-span-1">
+          <div class="flex items-center gap-3 mb-6">
+            <img src="image/favicon.svg" alt="CoRamTix" class="h-10 w-10" 
+                 onerror="this.src='images/favicon-96x96.png'">
+            <span class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">CORAMTIX</span>
+          </div>
+          <p class="text-gray-300 leading-relaxed mb-6">
+            Reliable 24/7 Discord bot hosting with enterprise-grade infrastructure and expert support.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Bot Hosting</h4>
+          <nav class="space-y-3">
+            <a href="/bot-hosting" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Bot Plans</a>
+            <a href="/game-hosting" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Game Hosting</a>
+            <a href="/support" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Setup Guide</a>
+            <a href="/ticket" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Get Support</a>
+          </nav>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Other Services</h4>
+          <nav class="space-y-3">
+            <a href="/game-hosting" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Game Hosting</a>
+            <a href="/vps-hosting" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">VPS Hosting</a>
+            <a href="/minecraft-hosting" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Minecraft Hosting</a>
+            <a href="/support" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Support Center</a>
+          </nav>
+        </div>
+
+        <!-- Support -->
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Get Help</h4>
+          <nav class="space-y-3">
+            <a href="/support" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Help Center</a>
+            <a href="/ticket" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Submit Ticket</a>
+            <a href="/404" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Contact Support</a>
+            <a href="/discord" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Join Discord</a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 mb-4 md:mb-0">
+          &copy; <span id="copyright-year">2025</span> CoRamTix. All rights reserved. | Premium Bot Hosting Services
+        </p>
+        <div class="flex space-x-6 text-sm">
+          <span class="inline-flex items-center text-green-400">
+            <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+            All Bots Online
+          </span>
+          <span class="text-gray-400 flex items-center">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+            SSL Secured
+          </span>
+          <span class="text-gray-400 flex items-center">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            24/7 Monitoring
+          </span>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- Enhanced JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      // Mobile menu functionality
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
-      if (mobileMenuBtn && mobileMenu) { mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); }); }
-      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+      
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isHidden = mobileMenu.classList.contains('hidden');
+          
+          mobileMenu.classList.toggle('hidden');
+          
+          // Update hamburger icon
+          mobileMenuBtn.innerHTML = isHidden 
+            ? `<svg class="h-7 w-7 transition-transform duration-300 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+               </svg>`
+            : `<svg class="h-7 w-7 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+               </svg>`;
+        });
+      }
+      
+      // Set copyright year
+      const copyrightYear = document.getElementById('copyright-year');
+      if (copyrightYear) {
+        copyrightYear.textContent = new Date().getFullYear();
+      }
+      
+      console.log('✅ Bot Hosting: All features initialized successfully');
     });
   </script>
+
+  <!-- External JavaScript Files -->
+  <script src="main.js"></script>
 </body>
 </html>
-
