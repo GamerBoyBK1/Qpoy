@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CoRamTix Cloud – Premium game servers, VPS, Discord bot hosting with 99.9% uptime, ultra-low latency, DDoS protection, and 24/7 expert support starting at ₹199/month.">
+  <meta name="description" content="CoRamTix Hosting – Premium game servers, VPS, Discord bot hosting with 99.9% uptime, ultra-low latency, DDoS protection, and 24/7 expert support starting at ₹199/month.">
   <meta name="keywords" content="game server hosting, bot hosting, discord bot hosting, minecraft hosting, rust hosting, ark hosting, fivem hosting, vps hosting, low latency, ddos protection, premium hosting India">
-  <meta name="author" content="CoRamTix Cloud">
+  <meta name="author" content="CoRamTix">
   <meta name="robots" content="index, follow">
-  <title>CoRamTix Cloud – Premium Game Server Hosting | 99.9% Uptime Guarantee</title>
+  <title>CoRamTix – Premium Game Server Hosting | 99.9% Uptime Guarantee</title>
   
-  <!-- Fixed Favicons & Icons - Correct Paths -->
+  <!-- Fixed Favicons & Icons - Placeholder Paths -->
   <link rel="icon" type="image/x-icon" href="/image/favicon.ico" />
   <link rel="icon" type="image/svg+xml" href="/image/favicon.svg" />
   <link rel="shortcut icon" href="/image/favicon.ico" />
@@ -21,54 +21,33 @@
   <meta property="og:site_name" content="CoRamTix Cloud">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cloud.coramtix.in">
-  <meta property="og:title" content="CoRamTix Cloud - Premium Game Server Hosting">
+  <meta property="og:title" content="CoRamTix - Premium Game Server Hosting">
   <meta property="og:description" content="Experience ultra-low latency with 99.9% uptime guarantee. Premium hardware for Minecraft, Rust, FiveM, Discord bots. Starting at ₹199/month.">
-  <meta property="og:image" content="/image/ccbanner.png">
+  <meta property="og:image" content="image/ccbanner.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CoRamTix Cloud - Premium Game Server Hosting">
+  <meta name="twitter:title" content="CoRamTix - Premium Game Server Hosting">
   <meta name="twitter:description" content="Ultra-low latency hosting with 99.9% uptime. Perfect for Minecraft, Rust, Discord bots. Starting at ₹199/month.">
-  <meta name="twitter:image" content="/image/ccbanner.png">
+  <meta name="twitter:image" content="image/ccbanner.png">
   
   <!-- Performance Optimizations -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="//cdn.tailwindcss.com">
   
-  <!-- Critical CSS for above-the-fold content -->
+  <!-- Critical CSS and Custom Variables -->
   <style>
-    /* Critical Above-the-fold Styles */
+    /* Critical Styles & Variables */
     :root { 
       --primary: #1A1A1A; 
       --secondary: #674CC4; 
       --accent: #8E6CEF; 
       --deep-purple-blue: #4D2FDB;
-      --success: #10B981;
-      --warning: #F59E0B;
-      --error: #EF4444;
     }
     
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:'Poppins',sans-serif;line-height:1.6;color:#1F2937;background:#F9FAFB;overflow-x:hidden}
-    
-    /* Enhanced Preloader */
-    #preloader{position:fixed;top:0;left:0;width:100vw;height:100vh;background:linear-gradient(135deg,#8B5CF6,#6D28D9,#5B21B6);display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:9999;transition:all .8s cubic-bezier(.4,0,.2,1)}
-    .preloader-content{text-align:center;color:#fff}
-    .brand-logo{font-size:clamp(2.5rem,6vw,4rem);font-weight:900;letter-spacing:.15em;margin-bottom:2rem;animation:logoGlow 2s ease-in-out infinite alternate;text-shadow:0 0 30px rgba(255,255,255,.5)}
-    @keyframes logoGlow{0%{opacity:.9;transform:scale(1)}100%{opacity:1;transform:scale(1.02);text-shadow:0 0 40px rgba(255,255,255,.8)}}
-    .spinner{width:60px;height:60px;border:5px solid rgba(255,255,255,.2);border-top:5px solid #fff;border-radius:50%;animation:spin 1.2s linear infinite;box-shadow:0 0 30px rgba(255,255,255,.3);margin-bottom:1.5rem}
-    @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-    .loading-text{font-size:1.1rem;font-weight:500;animation:fadeInOut 2s ease-in-out infinite}
-    @keyframes fadeInOut{0%,100%{opacity:.7}50%{opacity:1}}
-    .progress-bar{width:280px;height:4px;background:rgba(255,255,255,.2);border-radius:2px;overflow:hidden;margin-top:1.5rem}
-    .progress-fill{height:100%;background:linear-gradient(90deg,#fff,#e0e7ff);width:0%;animation:progressLoad 2.8s ease-out forwards;box-shadow:0 0 10px rgba(255,255,255,.5)}
-    @keyframes progressLoad{0%{width:0%}25%{width:30%}50%{width:65%}75%{width:90%}100%{width:100%}}
-    .preloader-hidden{opacity:0!important;transform:scale(.9)!important;pointer-events:none!important}
-    
-    /* Content wrapper */
-    #content-wrapper{opacity:0;transform:translateY(20px);transition:all .8s cubic-bezier(.25,.46,.45,.94)}
-    .content-visible{opacity:1!important;transform:translateY(0)!important}
     
     /* Hero gradient */
     .hero-gradient{background:linear-gradient(135deg,var(--secondary),var(--deep-purple-blue))}
@@ -107,15 +86,15 @@
             'pulse-slow': 'pulse 4s infinite',
             'fade-in': 'fadeIn 0.8s ease-in-out',
             'slide-up': 'slideUp 0.8s ease-out'
+          },
+          keyframes: {
+            fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+            slideUp: { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } }
           }
         }
       }
     }
   </script>
-  
-  <!-- External CSS Files -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive.css">
   
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
@@ -123,8 +102,8 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "CoRamTix Cloud",
-    "url": "https://cloud.coramtix.in",
-    "logo": "https://cloud.coramtix.in/images/favicon.svg",
+    "url": "https://coramtix.in",
+    "logo": "https://coramtix.in/images/favicon.svg",
     "description": "Premium game server hosting with 99.9% uptime guarantee",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -139,26 +118,16 @@
   }
   </script>
 </head>
-<body class="bg-gray-50">
-  <!-- Enhanced Preloader with Progress Bar -->
-  <div id="preloader">
-    <div class="preloader-content">
-      <div class="brand-logo">CoRamTix Cloud</div>
-      <div class="spinner"></div>
-      <div class="loading-text" id="loading-text">Loading premium experience...</div>
-      <div class="progress-bar">
-        <div class="progress-fill"></div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Main Content Wrapper -->
-  <div id="content-wrapper" class="min-h-screen">
+<body class="bg-gray-50 font-poppins">
+  <!-- Main Content Wrapper (Now loads instantly) -->
+  <div class="min-h-screen">
     <!-- Enhanced Header with Glassmorphism -->
     <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50 transition-all duration-300" id="navbar">
       <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <!-- Logo removed as requested -->
-        <a href="/" class="text-2xl font-bold text-gray-800 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">CORAMTIX CLOUD</a>
+        <a href="/" class="flex items-center gap-3 transition-transform duration-300 hover:scale-105" aria-label="CoRamTix Homepage">
+          <img src="/image/favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" />
+          <span class="text-2xl font-bold text-gray-800 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">CORAMTIX</span>
+        </a>
         
         <nav class="hidden md:flex items-center space-x-2">
           <a href="/game-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline transition-all duration-300 hover:bg-purple-50">Game Hosting</a>
@@ -240,10 +209,9 @@
               </a>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Enhanced Services Showcase -->
+      <!-- Enhanced Services Showcase - WHITE HIGHLIGHTS REMOVED -->
       <div class="divide-y divide-gray-100 bg-white">
         <!-- Game Hosting Promo -->
         <section id="game-hosting-promo" class="py-20 relative overflow-hidden">
@@ -356,7 +324,7 @@
               <div class="bg-white rounded-xl p-6 shadow-md">
                 <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
                   <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
                   </svg>
                 </div>
                 <h3 class="font-bold text-gray-800 mb-2">NVMe Performance</h3>
@@ -391,7 +359,7 @@
               <span class="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
               Why Choose Us
             </div>
-            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Why Choose CoRamTix Cloud?</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Why Choose CoRamTix?</h2>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">We provide the best infrastructure and support for your hosting needs with enterprise-grade hardware and 24/7 expert assistance.</p>
           </div>
           
@@ -489,7 +457,8 @@
           <!-- Brand Section -->
           <div class="md:col-span-1">
             <div class="flex items-center gap-3 mb-6">
-              <span class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">CORAMTIX CLOUD</span>
+              <img src="/image/favicon.svg" alt="CoRamTix" class="h-10 w-10">
+              <span class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">CORAMTIX</span>
             </div>
             <p class="text-gray-300 leading-relaxed mb-6">
               Premium server hosting solutions for gamers, developers, and businesses worldwide. Experience enterprise-grade infrastructure with 24/7 expert support.
@@ -576,7 +545,7 @@
         <!-- Footer Bottom -->
         <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p class="text-gray-400 mb-4 md:mb-0">
-            &copy; <span id="copyright-year">2025</span> CoRamTix Cloud. All rights reserved. | Premium Server Hosting Solutions
+            &copy; <span id="copyright-year">2025</span> CoRamTix. All rights reserved. | Premium Server Hosting Solutions
           </p>
           <div class="flex space-x-6 text-sm">
             <span class="inline-flex items-center text-green-400">
@@ -601,14 +570,10 @@
     </footer>
   </div>
 
-  <!-- External JavaScript Files -->
-  <script src="preloader.js"></script>
-  <script src="main.js"></script>
-
-  <!-- Enhanced Inline JavaScript for Critical Functions -->
+  <!-- Inline JavaScript for Critical Functions -->
   <script>
-    // Enhanced Mobile Menu with Animation
     document.addEventListener('DOMContentLoaded', () => {
+      // Mobile Menu Toggle
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
       
@@ -631,6 +596,7 @@
       }
 
       // Enhanced Statistics Counter Animation
+      // This function remains available for any future stat elements with data-target attribute
       function animateCounter(element, target, duration = 2000) {
         const start = parseInt(element.textContent) || 0;
         const increment = target / (duration / 16);
@@ -667,7 +633,7 @@
         });
       }, observerOptions);
 
-      // Observe all stat elements
+      // Observe all stat elements (Currently none in the final output, but functional if added)
       document.querySelectorAll('[data-target]').forEach(stat => {
         statsObserver.observe(stat);
       });
@@ -675,51 +641,9 @@
       // Set copyright year
       document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
-      console.log('✅ CoRamTix Cloud Enhanced: All features initialized successfully');
+      console.log('✅ CoRamTix: All features initialized successfully (Loader removed)');
     });
-
-    // Enhanced Preloader with Progress Tracking
-    let preloaderProgress = 0;
-    const preloaderInterval = setInterval(() => {
-      preloaderProgress += Math.random() * 15;
-      if (preloaderProgress >= 100) {
-        preloaderProgress = 100;
-        clearInterval(preloaderInterval);
-      }
-    }, 100);
-
-    // Hide preloader when page loads
-    window.addEventListener("load", () => {
-      const preloader = document.getElementById("preloader");
-      const content = document.getElementById("content-wrapper");
-      
-      if (preloader && content) {
-        // Ensure minimum display time
-        setTimeout(() => {
-          preloader.classList.add('preloader-hidden');
-          
-          setTimeout(() => {
-            preloader.style.display = "none";
-            content.classList.add('content-visible');
-            console.log('✅ Preloader hidden, content visible');
-          }, 800);
-        }, 1000);
-      }
-    });
-  </script>
-
-  <!-- Performance Analytics -->
-  <script>
-    // Performance monitoring
-    if ('performance' in window) {
-      window.addEventListener('load', () => {
-        setTimeout(() => {
-          const perfData = performance.getEntriesByType('navigation')[0];
-          const loadTime = perfData.loadEventEnd - perfData.fetchStart;
-          console.log(`⚡ Page loaded in ${Math.round(loadTime)}ms`);
-        }, 1000);
-      });
-    }
   </script>
 </body>
 </html>
+
