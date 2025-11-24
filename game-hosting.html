@@ -1,644 +1,279 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Game Server Hosting - CoRamTix | Minecraft, Rust, FiveM & More</title>
-  <meta name="description" content="Explore high-performance game server hosting for Minecraft, Rust, FiveM, CS:GO, and more. Instant setup, DDoS protection, and 24/7 support starting at ₹199/month.">
-  <meta name="keywords" content="game server hosting, minecraft hosting, rust hosting, fivem hosting, csgo hosting, game servers, premium hosting">
-  
-  <!-- Fixed Favicon and Meta Tags -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="manifest" href="web-app-manifest.json" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoRamTix - Game Hosting</title>
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Game Server Hosting - CoRamTix">
-  <meta property="og:description" content="High-performance hosting for Minecraft, Rust, FiveM, CS:GO, and more. Starting at ₹199/month.">
-  <meta property="og:image" content="image/ccbanner.png">
-  <meta property="og:url" content="https://coramtix.in/game-hosting">
-  <meta name="twitter:card" content="summary_large_image">
+	<meta property="og:site_name" content="CoRamTix">
+	<meta property="og:title" content="CoRamTix - Game Hosting">
+	<meta name="twitter:card" content="summary">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="Powerful, Reliable And Affordable Game Hosting For Minecraft, Rust, FiveM, ARK and CS:GO. Instant Setup With DDoS Protection And Easy Control Panel.">
+	<meta name="description" content="Powerful, Reliable And Affordable Game Hosting For Minecraft, Rust, FiveM, ARK and CS:GO. Instant Setup With DDoS Protection And Easy Control Panel.">
+	<meta property="og:url" content="https://coramtix.in/game-hosting">
+	<meta property="og:image" content="">
+	<meta name="twitter:card" content="summary_large_image">
+	<link rel="apple-touch-icon" sizes="180x180" href="minecraft.html">
+	<link rel="icon" type="image/png" sizes="32x32" href="../index.html">
+	<link rel="icon" type="image/png" sizes="16x16" href="game-hosting.html">
+	<link rel="manifest" href="game-hosting.html">
+	<link rel="mask-icon" href="game-hosting.html" color="#000000">
+	<link rel="shortcut icon" href="game-hosting.html">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-config" content="">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
   
-  <!-- Performance Optimizations -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Enhanced Styles - Same Theme as Main Site -->
   <style>
-    :root { 
-      --primary: #1A1A1A; 
-      --secondary: #674CC4; 
-      --accent: #8E6CEF; 
-      --deep-purple-blue: #4D2FDB;
-      --success: #10B981;
-      --warning: #F59E0B;
+    /* Click Animation (from previous step) */
+    .btn, 
+    .dropdown-item,
+    .service-box a.btn-primary {
+        transition: transform 0.1s ease-out;
     }
     
-    body { 
-      font-family: 'Poppins', sans-serif; 
-      background: #F9FAFB; 
-      color: #1F2937; 
-      overflow-x: hidden;
+    .btn:active, 
+    .dropdown-item:active,
+    .service-box a.btn-primary:active {
+        transform: scale(0.98); 
     }
     
-    /* Hero gradient - same as main site */
-    .hero-gradient { 
-      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue)); 
+    #panel:active {
+        transform: scale(0.98);
     }
-    
-    /* Navigation styles */
-    .nav-link-underline:hover { 
-      color: var(--secondary); 
-      background: rgba(103, 76, 196, 0.05);
+
+    /* ✨ Dynamic Service Box Styles (for "Image Jasy Kar Do") */
+    .service-box {
+        transition: all 0.3s ease-in-out; /* Smooth transitions for hover effects */
+        /* Subtle shadow to give depth */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        border-radius: 8px; /* Rounded corners for modern look */
     }
-    
-    /* Enhanced game cards */
-    .game-card { 
-      display: block; 
-      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); 
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 1px solid #E5E7EB;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .game-card:hover { 
-      transform: translateY(-8px); 
-      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 10px 10px -5px rgb(0 0 0 / 0.04);
-      border-color: var(--secondary);
-    }
-    
-    .game-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
-      transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-    
-    .game-card:hover::before {
-      transform: scaleX(1);
-    }
-    
-    .game-image {
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .game-image img {
-      transition: transform 0.3s ease;
-    }
-    
-    .game-card:hover .game-image img {
-      transform: scale(1.05);
-    }
-    
-    .popular-badge {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      background: linear-gradient(135deg, #10B981, #059669);
-      color: white;
-      padding: 0.25rem 0.75rem;
-      border-radius: 1rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.025em;
-    }
-    
-    .price-highlight {
-      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      font-weight: 800;
-    }
-    
-    /* Enhanced button styles */
-    .btn-game {
-      background: linear-gradient(135deg, var(--secondary), var(--deep-purple-blue));
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .btn-game::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      transition: left 0.5s ease;
-    }
-    
-    .btn-game:hover::before {
-      left: 100%;
-    }
-    
-    .btn-game:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(103, 76, 196, 0.3);
-    }
-    
-    /* Features section */
-    .feature-badge {
-      display: inline-flex;
-      align-items: center;
-      background: rgba(16, 185, 129, 0.1);
-      color: #059669;
-      padding: 0.25rem 0.75rem;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    
-    /* Hero feature pills */
-    .hero-feature {
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      display: inline-flex;
-      align-items: center;
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-    
-    /* Animated background elements */
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-      animation: floatLight 8s ease-in-out infinite;
-    }
-    
-    @keyframes floatLight {
-      0%, 100% { transform: translateX(0) translateY(0); }
-      25% { transform: translateX(20px) translateY(-15px); }
-      50% { transform: translateX(-10px) translateY(10px); }
-      75% { transform: translateX(15px) translateY(-5px); }
-    }
-    
-    /* Loading animation */
-    .loading-shimmer {
-      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-      background-size: 200% 100%;
-      animation: shimmer 1.5s infinite;
-    }
-    
-    @keyframes shimmer {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
-    }
-    
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-      .game-card {
-        margin-bottom: 1rem;
-      }
-      
-      .hero-gradient {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-      }
-      
-      .hero-features {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
+
+    .service-box:hover {
+        /* Lifts the box up slightly */
+        transform: translateY(-5px); 
+        /* Stronger shadow on hover for a better visual feedback */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
   </style>
-  
-  <!-- External CSS Files -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="responsive.css">
-</head>
-<body class="bg-gray-50">
-  <!-- Enhanced Header - Same as Main Site -->
-  <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50 transition-all duration-300">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index" class="flex items-center gap-3 transition-transform duration-300 hover:scale-105" aria-label="CoRamTix Homepage">
-        <img src="favicon.svg" alt="CoRamTix Logo" class="h-9 w-9" 
-             onerror="this.src='images/favicon-96x96.png'" />
-        <span class="text-2xl font-bold text-gray-800 bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">CORAMTIX</span>
-      </a>
-      
-      <nav class="hidden md:flex items-center space-x-2">
-        <a href="game-hosting" class="text-indigo-600 font-semibold px-4 py-2 rounded-md bg-purple-50">Game Hosting</a>
-        <a href="bot-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline transition-all duration-300">Bot Hosting</a>
-        <a href="vps-hosting" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline transition-all duration-300">VPS Hosting</a>
-        <a href="support" class="text-gray-600 font-medium px-4 py-2 rounded-md nav-link-underline transition-all duration-300">Support</a>
-        <a href="login" class="ml-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium px-5 py-2.5 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">Login</a>
-      </nav>
-      
-      <button id="mobile-menu-btn" class="md:hidden text-gray-700 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300" aria-label="Toggle mobile menu">
-        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
-    </div>
-    
-    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t px-4 pt-2 pb-4 space-y-2">
-        <a href="game-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">
-          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M19 10a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-          Game Hosting
-        </a>
-        <a href="bot-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">
-          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
-          Bot Hosting
-        </a>
-        <a href="vps-hosting" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">
-          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
-          </svg>
-          VPS Hosting
-        </a>
-        <a href="support" class="block text-gray-600 hover:text-indigo-600 font-medium py-3 px-2 rounded-lg hover:bg-purple-50 transition-all duration-300">
-          <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
-          </svg>
-          Support
-        </a>
-        <a href="login" class="block bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-center font-medium mt-4 px-5 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">Login</a>
-      </div>
-    </header>
+  </head>
 
-  <main>
-    <!-- Enhanced Hero Section -->
-    <section class="hero-gradient text-white overflow-hidden relative">
-      <!-- Animated Background -->
-      <div class="absolute inset-0">
-        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-white/10 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-        <div class="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-300/20 rounded-full mix-blend-multiply filter blur-xl"></div>
-      </div>
-      
-      <div class="container mx-auto px-6 py-24 text-center relative z-10">
-        <div class="inline-flex items-center bg-white/20 text-white px-4 py-2 rounded-full font-semibold mb-6 backdrop-blur-sm">
-          <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M19 10a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-          Premium Game Hosting
-        </div>
-        
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
-          Game Server <br>
-          <span class="bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent">Hosting</span>
-        </h1>
-        <p class="text-lg sm:text-xl max-w-3xl mx-auto opacity-90 mb-8 leading-relaxed">
-          Powerful, reliable, and easy-to-use hosting for <strong>Minecraft, Rust, FiveM</strong>, and 5 popular games. <strong>Instant setup</strong> with DDoS protection.
-        </p>
-        
-        <!-- Key Features -->
-        <div class="hero-features flex flex-wrap justify-center gap-6 mb-8 text-sm">
-          <span class="hero-feature">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
-            Instant Setup
-          </span>
-          <span class="hero-feature">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-            DDoS Protection
-          </span>
-          <span class="hero-feature">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
-            </svg>
-            24/7 Support
-          </span>
-          <span class="hero-feature">
-            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
-            </svg>
-            NVMe SSD
-          </span>
-        </div>
-      </div>
-    </section>
+<body>
+	<nav id="navbar_top" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+	  <div class="container-fluid container-custom">
+	    <a class="navbar-brand" href="https://www.coramtix.in">
+	      <img class="img-fluid" src="assets/images/logo.svg" alt="CORAMTIX Logo" /> <span>CORAMTIX</span>
+	    </a>
+	    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dinoNavbar" aria-controls="dinoNavbar" aria-expanded="false" aria-label="Toggle navigation">
+	      <span class="navbar-toggler-icon"></span>
+	    </button>
+	    <div class="collapse navbar-collapse" id="dinoNavbar">
+	      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+	        <li class="nav-item">
+	          <a class="nav-link" href="https://www.coramtix.in">Home</a>
+	        </li>
+	        <li class="nav-item">
+	          <a class="nav-link" href="minecraft">Minecraft Hosting</a>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            Game Hosting
+	          </a>
+	          <ul class="dropdown-menu dropdown-large dropdown-menu-end">
+	            <div class="row g-3">
+	              <div class="col-6">
+	                <ul class="list-unstyled">
+	                  <li><a class="dropdown-item" href="ark"><img src="assets/images/game_icons/game-ark.png" alt="ARK Icon" /> ARK</a></li>
+	                  <li><a class="dropdown-item" href="csgo.html"><img src="assets/images/game_icons/game-csgo.png" alt="CS:GO Icon" /> CS:GO</a></li>
+	                </ul>
+	              </div>
+	              <div class="col-6">
+	                <ul class="list-unstyled">
+	                  <li><a class="dropdown-item" href="fivem"><img src="assets/images/game_icons/game-fivem.png" alt="FiveM Icon" /> FiveM</a></li>
+	                  <li><a class="dropdown-item" href="rust"><img src="assets/images/game_icons/game-rust.png" alt="RUST Icon" /> RUST</a></li>
+	                </ul>
+	              </div>
+	            </div>
+	          </ul>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            Other Hosting
+	          </a>
+	          <ul class="dropdown-menu dropdown-menu-end">
+	            <li><a class="dropdown-item" href="vps-hosting">VPS Hosting</a></li>
+	            <li><a class="dropdown-item" href="bot-hosting">Bot Hosting</a></li>
+	          </ul>
+	        </li>
+	        <li class="nav-item dropdown">
+	          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+	            Important
+	          </a>
+	          <ul class="dropdown-menu dropdown-menu-end">
+	            <li><a class="dropdown-item" href="partners">Contact</a></li>
+	            <li><a class="dropdown-item" href="contact">Terms of Service</a></li>
+	            <li><a class="dropdown-item" href="terms-of-service">Terms of Service</a></li>
+	            <li><a class="dropdown-item" href="privacy-policy">Privacy Policy</a></li>
+	          </ul>
+	        </li>
+	        <li class="nav-item">
+	          <div class="dropdown text-center">
+	            <a class="btn dropdown-toggle" id="panel" data-bs-toggle="dropdown" aria-expanded="false">
+	              Client Area
+	            </a>
+	            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-panel" aria-labelledby="panel">
+	              <a class="dropdown-item" href="client-area.html">
+	                Client Area <span class="d-block">Billing &amp; Support</span>
+	              </a>
+	              <a class="dropdown-item" href="game-panel.html">
+	                Game Panel <span class="d-block">Game Management</span>
+	              </a>
+	            </ul>
+	          </div>
+	        </li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+<div class="hero">
+	<div class="container-fluid container-custom h-100">
+		<div class="row d-flex justify-content-center align-items-center h-100">
+			<div class="col-lg-6 me-auto hero_content">
+				<h2>Game Server
+Hosting</h2>
+				<p>Powerful, reliable, and easy-to-use hosting for Minecraft, Rust, FiveM, and 5 popular games. Instant setup with DDoS protection</p>
+				<a href="#" class="btn">Explore Our Services</a>
+			</div>
+		</div>
+	</div>
+</div>
 
-    <!-- Enhanced Games Grid -->
-    <section id="games" class="py-20 relative">
-      <div class="container mx-auto px-6">
-        <!-- Section Header -->
-        <div class="text-center mb-16">
-          <div class="inline-flex items-center bg-purple-100 text-purple-700 px-4 py-2 rounded-full font-semibold mb-6">
-            <span class="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse"></span>
-            Choose Your Game
-          </div>
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Popular Game Servers</h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">Select from our optimized hosting solutions for the most popular games</p>
-        </div>
-        
-        <!-- Games Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          
-          <!-- Minecraft Hosting -->
-          <a href="minecraft-hosting" class="game-card bg-white rounded-xl group">
-            <div class="popular-badge">Most Popular</div>
-            <div class="game-image relative">
-              <img src="Minecraftim.jpeg" alt="Minecraft Hosting" class="w-full h-40 object-cover" 
-                   onerror="this.src='https://via.placeholder.com/400x200/4CAF50/white?text=Minecraft'" />
-              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
-            </div>
-            <div class="p-6">
-              <div class="feature-badge mb-2">
-                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                </svg>
-                Instant Setup
-              </div>
-              <h3 class="text-2xl font-bold mb-2 text-gray-800 group-hover:text-purple-600 transition-colors duration-300">Minecraft</h3>
-              <p class="text-gray-600 mb-4">Starting at <span class="price-highlight text-xl">₹30/mo</span></p>
-              <span class="btn-game block w-full text-center text-white font-semibold py-3 rounded-lg relative z-10">
-                View Plans
-                <svg class="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                </svg>
-              </span>
-            </div>
-          </a>
+  <section id="plans" class="py-5">
+	<div class="container">
+		<div class="title text-center mb-5">
+			<h2>Choose Your Game</h2>
+			<p>Start your server within seconds.</p>
+		</div>
+		
+		<div class="row g-4">
+			
+			<div class="col-md-4">
+				<div class="service-box text-center p-4">
+					<img src="assets/images/game_icons/minecraft.webp" height="80">
+					<h3 class="mt-3">Minecraft</h3>
+					<a href="minecraft-hosting" class="btn btn-primary mt-2">View Plans</a>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="service-box text-center p-4">
+					<img src="assets/images/game_icons/ark.webp" height="80">
+					<h3 class="mt-3">ARK: Survival</h3>
+					<a href="ark" class="btn btn-primary mt-2">View Plans</a>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="service-box text-center p-4">
+					<img src="assets/images/game_icons/fivem.webp" height="80">
+					<h3 class="mt-3">FiveM</h3>
+					<a href="fivem" class="btn btn-primary mt-2">View Plans</a>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="service-box text-center p-4">
+					<img src="assets/images/game_icons/csgo.webp" height="80">
+					<h3 class="mt-3">CS:GO</h3>
+					<a href="csgo" class="btn btn-primary mt-2">View Plans</a>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="service-box text-center p-4">
+					<img src="assets/images/game_icons/rust.webp" height="80">
+					<h3 class="mt-3">RUST</h3>
+					<a href="rust" class="btn btn-primary mt-2">View Plans</a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</section>
 
-          <!-- FiveM Hosting -->
-          <a href="fivem-hosting" class="game-card bg-white rounded-xl group">
-            <div class="game-image relative">
-              <img src="fivem.png" alt="FiveM Hosting" class="w-full h-40 object-cover" 
-                   onerror="this.src='https://via.placeholder.com/400x200/007bff/white?text=FiveM'" />
-              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
-            </div>
-            <div class="p-6">
-              <div class="feature-badge mb-2">
-                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                </svg>
-                High Performance
-              </div>
-              <h3 class="text-2xl font-bold mb-2 text-gray-800 group-hover:text-purple-600 transition-colors duration-300">FiveM</h3>
-              <p class="text-gray-600 mb-4">Starting at <span class="price-highlight text-xl">₹649/mo</span></p>
-              <span class="btn-game block w-full text-center text-white font-semibold py-3 rounded-lg relative z-10">
-                View Plans
-                <svg class="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                </svg>
-              </span>
-            </div>
-          </a>
+	<footer class="py-5">
+	  <div class="container-fluid container-custom">
+	    <div class="row">
+	      <div class="col-lg-9">
+	        <div class="row">
+	          <div class="col-lg-4">
+	            <h4>Services</h4>
+	            <ul>
+	              <li><a href="game-hosting">Game Hosting</a></li>
+	              <li><a href="bot-hosting">Bot Hosting </a></li>
+	              <li><a href="vps-hosting">VPS Hosting</a></li>
+	            </ul>
+	          </div>
+	          <div class="col-lg-4">
+	            <h4>Support</h4>
+	            <ul>
+	              <li><a href="contact">Contact</a></li>
+	              <li><a href="https://discord.gg/Bc26Mgmrum">Discord</a></li>
+	            </ul>
+	          </div>
+	          <div class="col-lg-4">
+	            <h4>Company</h4>
+	            <ul>
+	              <li><a href="refund-policy">Refund Policy</a></li>
+	              <li><a href="terms-of-service">Terms of Service</a></li>
+	              <li><a href="privacy-policy">Privacy Policy</a></li>
+	            </ul>
+	          </div>
+	        </div>
+	      </div>
+	      <div class="col-lg-3">
+	        <h3>
+	          <img class="img-fluid" src="assets/images/logo.svg" alt="CORAMTIX Footer Logo" /> <span>CORAMTIX</span>
+	        </h3>
+	        <p class="copy">&copy; 2025 CoRamTix. All rights reserved. | Premium Server Hosting Solutions</p>
+	      </div>
+	    </div>
+	  </div>
+	</footer>
 
-          <!-- Rust Hosting -->
-          <a href="rust-hosting" class="game-card bg-white rounded-xl group">
-            <div class="game-image relative">
-              <img src="rust.png" alt="Rust Hosting" class="w-full h-40 object-cover" />
-              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
-            </div>
-            <div class="p-6">
-              <div class="feature-badge mb-2">
-                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                </svg>
-                Optimized
-              </div>
-              <h3 class="text-2xl font-bold mb-2 text-gray-800 group-hover:text-purple-600 transition-colors duration-300">Rust</h3>
-              <p class="text-gray-600 mb-4">Starting at <span class="price-highlight text-xl">₹799/mo</span></p>
-              <span class="btn-game block w-full text-center text-white font-semibold py-3 rounded-lg relative z-10">
-                View Plans
-                <svg class="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                </svg>
-              </span>
-            </div>
-          </a>
-          
-          <!-- CS:GO Hosting -->
-          <a href="csgo-hosting" class="game-card bg-white rounded-xl group">
-            <div class="game-image relative">
-              <img src="csgo.png" alt="CS:GO Hosting" class="w-full h-40 object-cover" />
-              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
-            </div>
-            <div class="p-6">
-              <div class="feature-badge mb-2">
-                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                </svg>
-                Low Latency
-              </div>
-              <h3 class="text-2xl font-bold mb-2 text-gray-800 group-hover:text-purple-600 transition-colors duration-300">Counter-Strike</h3>
-              <p class="text-gray-600 mb-4">Starting at <span class="price-highlight text-xl">₹499/mo</span></p>
-              <span class="btn-game block w-full text-center text-white font-semibold py-3 rounded-lg relative z-10">
-                View Plans
-                <svg class="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                </svg>
-              </span>
-            </div>
-          </a>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
 
-          <!-- Additional Games -->
-          <a href="ark-hosting" class="game-card bg-white rounded-xl group">
-            <div class="game-image relative">
-              <img src="/image/arksurvival.png" alt="ARK Hosting" class="w-full h-40 object-cover" />
-              <div class="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors duration-300"></div>
-            </div>
-            <div class="p-6">
-              <div class="feature-badge mb-2">
-                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                </svg>
-                Survival Ready
-              </div>
-              <h3 class="text-2xl font-bold mb-2 text-gray-800 group-hover:text-purple-600 transition-colors duration-300">ARK: Survival</h3>
-              <p class="text-gray-600 mb-4">Starting at <span class="price-highlight text-xl">₹899/mo</span></p>
-              <span class="btn-game block w-full text-center text-white font-semibold py-3 rounded-lg relative z-10">
-                View Plans
-                <svg class="w-4 h-4 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                </svg>
-              </span>
-            </div>
-          </a>
-
-        </div>
-        
-        <!-- More Games CTA -->
-        <div class="text-center mt-16">
-          <p class="text-gray-600 mb-6">Don't see your game? We support 50+ games!</p>
-          <a href="support" class="inline-flex items-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group">
-            Contact Support
-            <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-  
-  <!-- Enhanced Footer - Same as Main Site -->
-  <footer class="bg-gradient-to-br from-gray-800 via-gray-900 to-black text-white">
-    <div class="container mx-auto px-6 py-16">
-      <!-- Footer Content -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-        <!-- Brand Section -->
-        <div class="md:col-span-1">
-          <div class="flex items-center gap-3 mb-6">
-            <img src="favicon.svg" alt="CoRamTix" class="h-10 w-10" onerror="this.style.display='none'">
-            <span class="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">CORAMTIX</span>
-          </div>
-          <p class="text-gray-300 leading-relaxed mb-6">
-            Premium server hosting solutions for gamers worldwide. Experience enterprise-grade infrastructure with 24/7 expert support.
-          </p>
-        </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h4 class="text-lg font-semibold mb-6">Popular Games</h4>
-          <nav class="space-y-3">
-            <a href="minecraft-hosting" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Minecraft Hosting</a>
-            <a href="rust-hosting" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Rust Hosting</a>
-            <a href="fivem-hosting" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">FiveM Hosting</a>
-            <a href="csgo-hosting" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">CS:GO Hosting</a>
-          </nav>
-        </div>
-
-        <!-- Services -->
-        <div>
-          <h4 class="text-lg font-semibold mb-6">Services</h4>
-          <nav class="space-y-3">
-            <a href="game-hosting" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Game Hosting</a>
-            <a href="bot-hosting" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Bot Hosting</a>
-            <a href="vps-hosting" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">VPS Hosting</a>
-            <a href="support" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Support</a>
-          </nav>
-        </div>
-
-        <!-- Support -->
-        <div>
-          <h4 class="text-lg font-semibold mb-6">Support</h4>
-          <nav class="space-y-3">
-            <a href="support" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Help Center</a>
-            <a href="404" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Contact Support</a>
-            <a href="ticket" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Submit Ticket</a>
-            <a href="discord" class="block text-gray-300 hover:text-purple-400 transition-colors duration-300">Join Discord</a>
-          </nav>
-        </div>
-      </div>
-
-      <!-- Footer Bottom -->
-      <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-        <p class="text-gray-400 mb-4 md:mb-0">
-          &copy; <span id="copyright-year">2025</span> CoRamTix. All rights reserved. | Premium Game Server Hosting
-        </p>
-        <div class="flex space-x-6 text-sm">
-          <span class="inline-flex items-center text-green-400">
-            <span class="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-            All Systems Operational
-          </span>
-          <span class="text-gray-400 flex items-center">
-            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-            </svg>
-            SSL Secured
-          </span>
-          <span class="text-gray-400 flex items-center">
-            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-            DDoS Protected
-          </span>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Enhanced JavaScript -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Mobile menu functionality
-      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      
-      if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-          const isHidden = mobileMenu.classList.contains('hidden');
-          
-          mobileMenu.classList.toggle('hidden');
-          
-          // Update hamburger icon
-          mobileMenuBtn.innerHTML = isHidden 
-            ? `<svg class="h-7 w-7 transition-transform duration-300 rotate-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-               </svg>`
-            : `<svg class="h-7 w-7 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-               </svg>`;
-        });
+    jQuery("#reviews").owlCarousel({
+      autoplay: true,
+      rewind: true,
+      margin: 20,
+      mouseDrag: true,
+      nav: false,
+      dots: false,
+      lazyLoad: true,
+      responsive: {
+        0: { items: 1 },
+        576: { items: 2 },
+        768: { items: 2 },
+        1024: { items: 2 },
+        1366: { items: 2 }
       }
-      
-      // Set copyright year
-      document.getElementById('copyright-year').textContent = new Date().getFullYear();
-      
-      // Lazy loading for images
-      const images = document.querySelectorAll('img[data-src]');
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.classList.remove('loading-shimmer');
-            observer.unobserve(img);
-          }
-        });
-      });
-      
-      images.forEach(img => imageObserver.observe(img));
-      
-      // Add loading animation to game cards
-      const gameCards = document.querySelectorAll('.game-card');
-      const cardObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.style.opacity = '1';
-              entry.target.style.transform = 'translateY(0)';
-            }, index * 100);
-            cardObserver.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.1 });
-      
-      gameCards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'all 0.6s ease';
-        cardObserver.observe(card);
-      });
-      
-      console.log('✅ Game Hosting: All features initialized successfully');
     });
   </script>
 
-  <!-- External JavaScript Files -->
-  <script src="main.js"></script>
+  <script src="assets/js/custom.js"></script>
 </body>
 </html>
-
